@@ -1,238 +1,175 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mira Mäkinen – vCard</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Filler – Research & Code</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
-  <!-- Background decorations -->
-  <div class="bg-decor" aria-hidden="true">
+<nav class="top-nav">
+    <div class="nav-left">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Theme wechseln">
+            <span class="icon-sun">&#9788;</span>
+            <span class="icon-moon">&#9789;</span>
+        </button>
+        <button class="lang-toggle" data-lang-toggle aria-label="Sprache wechseln">EN</button>
+    </div>
+    <div class="nav-links">
+        <a href="#about" class="nav-link" data-i18n="nav.about">Über</a>
+        <a href="#research" class="nav-link" data-i18n="nav.research">Forschung</a>
+        <a href="#publications" class="nav-link" data-i18n="nav.publications">Publikationen</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+    </div>
+    <div class="nav-spacer"></div>
+</nav>
 
-    <!-- Flower top-left -->
-    <svg class="decor decor--fl-tl" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(40,40)">
-        <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#f4a0b5" opacity="0.75"/>
-        <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#f4a0b5" opacity="0.75" transform="rotate(60)"/>
-        <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#f4a0b5" opacity="0.75" transform="rotate(120)"/>
-        <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#f4a0b5" opacity="0.75" transform="rotate(180)"/>
-        <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#f4a0b5" opacity="0.75" transform="rotate(240)"/>
-        <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#f4a0b5" opacity="0.75" transform="rotate(300)"/>
-        <circle cx="0" cy="0" r="11" fill="#f9d77e"/>
-      </g>
-    </svg>
+<main>
 
-    <!-- Flower bottom-right -->
-    <svg class="decor decor--fl-br" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(50,50)">
-        <ellipse cx="0" cy="-22" rx="10" ry="17" fill="#7bb8d4" opacity="0.6"/>
-        <ellipse cx="0" cy="-22" rx="10" ry="17" fill="#7bb8d4" opacity="0.6" transform="rotate(60)"/>
-        <ellipse cx="0" cy="-22" rx="10" ry="17" fill="#7bb8d4" opacity="0.6" transform="rotate(120)"/>
-        <ellipse cx="0" cy="-22" rx="10" ry="17" fill="#7bb8d4" opacity="0.6" transform="rotate(180)"/>
-        <ellipse cx="0" cy="-22" rx="10" ry="17" fill="#7bb8d4" opacity="0.6" transform="rotate(240)"/>
-        <ellipse cx="0" cy="-22" rx="10" ry="17" fill="#7bb8d4" opacity="0.6" transform="rotate(300)"/>
-        <circle cx="0" cy="0" r="13" fill="#f9d77e"/>
-      </g>
-    </svg>
-
-    <!-- Star top-right -->
-    <svg class="decor decor--star-tr" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="20,4 23,15 35,15 25,22 29,34 20,27 11,34 15,22 5,15 17,15" fill="#f9d77e" opacity="0.85"/>
-    </svg>
-
-    <!-- Star mid-left -->
-    <svg class="decor decor--star-ml" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="15,3 17,11 26,11 19,17 22,26 15,20 8,26 11,17 4,11 13,11" fill="#f4a0b5" opacity="0.7"/>
-    </svg>
-
-    <!-- Small flower mid-right -->
-    <svg class="decor decor--fl-mr" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-      <g transform="translate(25,25)">
-        <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#f4a0b5" opacity="0.65"/>
-        <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#f4a0b5" opacity="0.65" transform="rotate(72)"/>
-        <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#f4a0b5" opacity="0.65" transform="rotate(144)"/>
-        <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#f4a0b5" opacity="0.65" transform="rotate(216)"/>
-        <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#f4a0b5" opacity="0.65" transform="rotate(288)"/>
-        <circle cx="0" cy="0" r="7" fill="#f9d77e"/>
-      </g>
-    </svg>
-
-    <!-- Star bottom-left -->
-    <svg class="decor decor--star-bl" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="18,3 21,13 32,13 23,19 26,30 18,24 10,30 13,19 4,13 15,13" fill="#f9d77e" opacity="0.75"/>
-    </svg>
-
-  </div>
-
-  <main>
-    <article class="card" id="card">
-
-      <!-- ── Header ─────────────────────────────── -->
-      <header class="card-header">
-
-        <!-- Moomin avatar -->
+<!-- HERO -->
+<section class="hero" id="about">
+    <div class="hero-inner">
         <div class="avatar-wrap">
-          <svg class="avatar-svg" viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <clipPath id="avatar-clip">
-                <circle cx="80" cy="88" r="76"/>
-              </clipPath>
-            </defs>
-            <!-- Background -->
-            <circle cx="80" cy="88" r="80" fill="#a8d8b9"/>
-            <g clip-path="url(#avatar-clip)">
-              <!-- Ears (drawn before head so they appear behind) -->
-              <ellipse cx="43" cy="50" rx="14" ry="18" fill="white" stroke="#3d2b1f" stroke-width="2"/>
-              <ellipse cx="117" cy="50" rx="14" ry="18" fill="white" stroke="#3d2b1f" stroke-width="2"/>
-              <!-- Head -->
-              <ellipse cx="80" cy="78" rx="43" ry="41" fill="white" stroke="#3d2b1f" stroke-width="2"/>
-              <!-- Body -->
-              <ellipse cx="80" cy="152" rx="46" ry="54" fill="white" stroke="#3d2b1f" stroke-width="2"/>
-              <!-- Left arm -->
-              <ellipse cx="27" cy="138" rx="14" ry="9" fill="white" stroke="#3d2b1f" stroke-width="1.8" transform="rotate(-28 27 138)"/>
-              <!-- Right arm -->
-              <ellipse cx="133" cy="138" rx="14" ry="9" fill="white" stroke="#3d2b1f" stroke-width="1.8" transform="rotate(28 133 138)"/>
-              <!-- Snout area -->
-              <ellipse cx="80" cy="96" rx="28" ry="20" fill="#f8f4ea" stroke="#3d2b1f" stroke-width="1.5"/>
-              <!-- Nose -->
-              <ellipse cx="80" cy="85" rx="7" ry="5" fill="#3d2b1f"/>
-              <!-- Eyes -->
-              <circle cx="59" cy="68" r="5.5" fill="#3d2b1f"/>
-              <circle cx="101" cy="68" r="5.5" fill="#3d2b1f"/>
-              <circle cx="61" cy="66" r="2" fill="white"/>
-              <circle cx="103" cy="66" r="2" fill="white"/>
-              <!-- Smile -->
-              <path d="M 66 106 Q 80 116 94 106" stroke="#3d2b1f" stroke-width="2" fill="none" stroke-linecap="round"/>
-            </g>
-            <!-- Ring border -->
-            <circle cx="80" cy="88" r="76" fill="none" stroke="#3d2b1f" stroke-width="3"/>
-          </svg>
+            <img src="profile.jpg" alt="Simon Filler" class="hero-avatar">
         </div>
+        <h1 class="hero-name">Simon Filler</h1>
+        <p class="hero-role" data-i18n="hero.role">M.Ed. · Promovend Empirische Politikdidaktik</p>
+        <p class="hero-bio" data-i18n="hero.bio">Unterrichtsforschung, KI in Forschung und Lehre, Politikdidaktik.</p>
+        <div class="hero-affiliation">
+            <span data-i18n="hero.affiliation">Technische Universität Dortmund</span>
+            <span class="dot">·</span>
+            <span data-i18n="hero.affiliation2">Didaktik der Sozialwissenschaften</span>
+        </div>
+        <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_primary">Schreib mir</a>
+            <a href="#research" class="btn btn-ghost" data-i18n="hero.cta_secondary">Forschung ansehen</a>
+        </div>
+    </div>
+</section>
 
-        <h1 class="name">Mira Mäkinen</h1>
-        <p class="job-title">UX Designerin &amp; Illustratorin</p>
-        <p class="location">
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="#f4a0b5" style="vertical-align:middle;margin-right:4px">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-          </svg>
-          Moomintal, Finnland
-        </p>
-        <blockquote class="tagline">„Gestalte Dinge, die sich wie Zuhause anfühlen."</blockquote>
+<!-- RESEARCH -->
+<section id="research" class="section">
+    <div class="section-inner">
+        <p class="section-label" data-i18n="research.label">Forschung</p>
+        <h2 class="section-title" data-i18n="research.title">Projekte</h2>
+        <p class="section-subtitle" data-i18n="research.subtitle">Dissertation, Projektbeteiligung und aktuelle Arbeiten.</p>
+        <div class="research-grid">
+            <article class="research-card">
+                <div class="card-tags">
+                    <span class="research-tag" data-i18n="research.comenedes_tag">Projekt</span>
+                    <span class="research-status research-status--active" data-i18n="research.comenedes_status">Aktiv</span>
+                </div>
+                <h3 class="research-heading" data-i18n="research.comenedes_title">ComeNEDeS</h3>
+                <p class="research-body"><strong data-i18n="meta.period">Zeitraum</strong>: 2026 – 2028<br><strong data-i18n="meta.role">Rolle</strong>: <span data-i18n="roles.comenedes">Mitarbeiter</span></p>
+                <p class="research-body" data-i18n="research.comenedes_body">Das Projekt ComeNEDeS_NRW entwickelt phasenübergreifende Kooperationsstrukturen zwischen Hochschulen und dem staatlichen Lehrerfortbildungssystem in NRW. Im Teilprojekt „Demokratie“ an der TU Dortmund werden Fortbildungskonzepte für Lehrkräfte der Sozialwissenschaften, Wirtschaft-Politik und Gesellschaftslehre systematisiert und erprobt.</p>
+                <a href="https://zlb.uni-due.de/2026/02/verbund-comenedes-entwickelt-fortbildungskonzepte-fuer-lehrkraefte/" target="_blank" rel="noopener" class="research-link"><span data-i18n="research.comenedes_link1">Mehr erfahren</span> →</a>
+                <br>
+                <a href="https://idif.sowi.tu-dortmund.de/forschung/projekte/prof-dr-dorothee-gronostay/comenedes-nrw/" target="_blank" rel="noopener" class="research-link"><span data-i18n="research.comenedes_link2">Teilprojekt Demokratie</span> →</a>
+            </article>
+            <article class="research-card">
+                <div class="card-tags">
+                    <span class="research-tag" data-i18n="research.diss_tag">Dissertationsprojekt</span>
+                    <span class="research-status research-status--active" data-i18n="research.diss_status">Aktiv</span>
+                </div>
+                <h3 class="research-heading" data-i18n="research.diss_title">Wahlen im Fokus</h3>
+                <p class="research-body"><strong data-i18n="meta.period">Zeitraum</strong>: 2023 – <span data-i18n="meta.year_now">heute</span><br><strong data-i18n="meta.role">Rolle</strong>: <span data-i18n="roles.diss">Promotionsstudent</span></p>
+                <p class="research-body" data-i18n="research.diss_body">Entwicklung und Erprobung von Kooperationsskripten im Politikunterricht. Fokus auf kognitive Aktivierung und politische Urteilsbildung bei Schüler*innen der 8. Jahrgangsstufe. Mixed-Methods-Design mit Wissenstests, Kleingruppen-Videographie und Arbeitsheften.</p>
+                <a href="https://idif.sowi.tu-dortmund.de/professuren/didaktik-der-sozialwissenschaften/simon-filler/" target="_blank" rel="noopener" class="research-link"><span data-i18n="research.diss_link">Mehr erfahren</span> →</a>
+            </article>
+            <article class="research-card">
+                <div class="card-tags">
+                    <span class="research-tag" data-i18n="research.talktrace_tag">Open Source</span>
+                    <span class="research-status research-status--active" data-i18n="research.talktrace_status">Aktiv</span>
+                </div>
+                <h3 class="research-heading" data-i18n="research.talktrace_title">TalkTrace AI neo</h3>
+                <p class="research-body"><strong data-i18n="meta.period">Zeitraum</strong>: 2026 – <span data-i18n="meta.year_now">heute</span><br><strong data-i18n="meta.role">Rolle</strong>: <span data-i18n="roles.talktrace">Entwickler</span></p>
+                <p class="research-body" data-i18n="research.talktrace_body">Open Source Software zur Analyse verbaler Interaktionen. Sie basiert auf Shiny für Python und nutzt Large Language Models, um quantitative Metriken und qualitative Kodierungen von transkribierten Dialogen zu erstellen und als strukturierte Berichte zu exportieren.</p>
+                <a href="https://github.com/MoominVibeCoder/talktrace-ai-neo" target="_blank" rel="noopener" class="research-link"><span data-i18n="research.talktrace_link">GitHub</span> →</a>
+            </article>
+            <article class="research-card">
+                <div class="card-tags">
+                    <span class="research-tag" data-i18n="research.lars_tag">OER-Projekt</span>
+                    <span class="research-status research-status--ended" data-i18n="research.lars_status">Beendet</span>
+                </div>
+                <h3 class="research-heading" data-i18n="research.lars_title">LArS.nrw</h3>
+                <p class="research-body"><strong data-i18n="meta.period">Zeitraum</strong>: 2021 – 2024<br><strong data-i18n="meta.role">Rolle</strong>: <span data-i18n="roles.lars">Koordination</span></p>
+                <p class="research-body" data-i18n="research.lars_body">Lernen mit Animationsfilmen realer Unterrichtsszenen. Im Projekt entstanden 24 Animationsfilme (3–6 Min.), Comics und umfangreiche Materialien für die universitäre Lehramtsbildung. Reale Videos zeigen typische Interaktionen und fördern professionelle Wahrnehmungsfähigkeiten.</p>
+                <a href="https://www.orca.nrw/oer/oer-finden/gefoerderte-kurse/oercontent-nrw/lars-nrw/" target="_blank" rel="noopener" class="research-link"><span data-i18n="research.lars_link1">Mehr erfahren</span> →</a>
+                <br>
+                <a href="https://www.politik-unterricht.de/Startseite/" target="_blank" rel="noopener" class="research-link"><span data-i18n="research.lars_link2">Projektwebsite</span> →</a>
+            </article>
+        </div>
+    </div>
+</section>
 
-      </header>
-
-      <!-- ── Wave separator ──────────────────────── -->
-      <div class="wave-sep" aria-hidden="true">
-        <svg viewBox="0 0 400 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,24 C80,48 160,0 240,24 C320,48 360,12 400,24 L400,48 L0,48 Z" fill="#a8d8b9" opacity="0.45"/>
-          <path d="M0,32 C100,12 200,48 300,24 C360,12 385,36 400,30 L400,48 L0,48 Z" fill="#7bb8d4" opacity="0.22"/>
-        </svg>
-      </div>
-
-      <!-- ── About ───────────────────────────────── -->
-      <section class="section section--about">
-        <h2>Über mich</h2>
-        <p>Ich gestalte digitale Erlebnisse, die warm, einladend und intuitiv sind – inspiriert von der stillen Magie des Moomintals und den kleinen Wundern des Alltags.</p>
-        <p>Ob Interface-Design, Illustration oder kreative Strategie – ich bringe Herz und Sorgfalt in jedes Projekt, das auf meinem Weg landet.</p>
-      </section>
-
-      <!-- ── Wave separator (flipped) ──────────────── -->
-      <div class="wave-sep wave-sep--flip" aria-hidden="true">
-        <svg viewBox="0 0 400 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,24 C80,0 160,48 240,24 C320,0 360,36 400,24 L400,0 L0,0 Z" fill="#a8d8b9" opacity="0.45"/>
-          <path d="M0,16 C100,36 200,0 300,24 C360,36 385,12 400,18 L400,0 L0,0 Z" fill="#7bb8d4" opacity="0.22"/>
-        </svg>
-      </div>
-
-      <!-- ── Contact ──────────────────────────────── -->
-      <section class="section section--contact">
-        <h2>Kontakt</h2>
-        <ul class="contact-list">
-
-          <li>
-            <a href="mailto:mira@moominvalley.fi" class="contact-link">
-              <span class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-              </span>
-              <span>mira@moominvalley.fi</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.miramakinen.fi" class="contact-link" target="_blank" rel="noopener noreferrer">
-              <span class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
-              </span>
-              <span>miramakinen.fi</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://linkedin.com/in/miramakinen" class="contact-link" target="_blank" rel="noopener noreferrer">
-              <span class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                </svg>
-              </span>
-              <span>LinkedIn</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/miramakinen" class="contact-link" target="_blank" rel="noopener noreferrer">
-              <span class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-                </svg>
-              </span>
-              <span>GitHub</span>
-            </a>
-          </li>
-
+<!-- PUBLICATIONS -->
+<section id="publications" class="section section-alt">
+    <div class="section-inner">
+        <p class="section-label" data-i18n="publications.label">Publikationen</p>
+        <h2 class="section-title" data-i18n="publications.title">Ausgewählte Beiträge</h2>
+        <p class="section-subtitle" data-i18n="publications.subtitle">Zeitschriftenartikel und Tagungsbeiträge.</p>
+        <ul class="pub-list">
+            <li class="pub-item">
+                <div class="pub-meta-line">
+                    <span class="pub-authors" data-i18n="publications.pub1_authors">Filler, S. & Gronostay, D.</span>
+                    <span class="pub-year">(2024)</span>
+                </div>
+                <div class="pub-title" data-i18n="publications.pub1_title">Vorstellung LArS-Modul A: Einstiegsphase</div>
+                <div class="pub-venue">
+                    <span data-i18n="publications.pub1_venue">In: Gronostay, D., Manzel, S., Hahn-Laudenberg, K., Teuwsen, J. (Hrsg.) Professionelle Unterrichtswahrnehmung im sozialwissenschaftlichen Fachunterricht. Politische Bildung. Springer VS, Wiesbaden.</span>
+                    <a href="https://doi.org/10.1007/978-3-658-41829-8_7" target="_blank" rel="noopener" class="pub-doi" data-i18n="publications.doi">DOI</a>
+                </div>
+            </li>
         </ul>
-      </section>
+    </div>
+</section>
 
-      <!-- ── Footer with walking Moomin ─────────────── -->
-      <footer class="card-footer">
-        <div class="moomin-walk" aria-hidden="true">
-          <!-- Side-view Moomin, facing right -->
-          <svg class="moomin-walking" viewBox="0 0 90 76" width="72" height="60" xmlns="http://www.w3.org/2000/svg">
-            <!-- Tail -->
-            <path d="M 20 50 Q 7 40 11 30" stroke="#3d2b1f" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <!-- Body -->
-            <ellipse cx="42" cy="52" rx="26" ry="22" fill="white" stroke="#3d2b1f" stroke-width="2"/>
-            <!-- Back leg -->
-            <ellipse cx="30" cy="70" rx="9" ry="5" fill="white" stroke="#3d2b1f" stroke-width="1.5"/>
-            <!-- Ear (behind head) -->
-            <ellipse cx="50" cy="13" rx="9" ry="12" fill="white" stroke="#3d2b1f" stroke-width="1.8"/>
-            <!-- Head -->
-            <ellipse cx="60" cy="30" rx="21" ry="20" fill="white" stroke="#3d2b1f" stroke-width="2"/>
-            <!-- Snout -->
-            <ellipse cx="76" cy="36" rx="14" ry="10" fill="#f8f4ea" stroke="#3d2b1f" stroke-width="1.5"/>
-            <!-- Nose -->
-            <ellipse cx="84" cy="31" rx="4" ry="3" fill="#3d2b1f"/>
-            <!-- Eye -->
-            <circle cx="68" cy="25" r="3.5" fill="#3d2b1f"/>
-            <circle cx="69" cy="24" r="1.5" fill="white"/>
-            <!-- Front leg -->
-            <ellipse cx="54" cy="70" rx="9" ry="5" fill="white" stroke="#3d2b1f" stroke-width="1.5"/>
-          </svg>
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="section-inner">
+        <p class="section-label" data-i18n="contact.label">Kontakt</p>
+        <h2 class="section-title" data-i18n="contact.title">Schreib mir</h2>
+        <p class="contact-lead" data-i18n="contact.lead">Für Forschungsfragen, Kooperationen oder einfach Hallo sagen.</p>
+        <a href="mailto:simon.filler@tu-dortmund.de" class="contact-big">simon.filler@tu-dortmund.de</a>
+        <div class="contact-social">
+            <a href="https://orcid.org/0009-0008-8736-8831" target="_blank" rel="noopener" data-i18n="contact.social_orcid">ORCID</a>
+            <a href="https://www.researchgate.net/profile/Simon-Filler" target="_blank" rel="noopener" data-i18n="contact.social_researchgate">ResearchGate</a>
+            <a href="https://www.linkedin.com/in/simon-f-a8b41a39a/" target="_blank" rel="noopener" data-i18n="contact.social_linkedin">LinkedIn</a>
         </div>
-        <p class="footer-text">Moomintal, Finnland &middot; 2024</p>
-      </footer>
+    </div>
+</section>
 
-    </article>
-  </main>
+</main>
 
-  <script src="script.js"></script>
+<footer class="page-footer">
+    <span>Simon Filler</span>
+    <span>·</span>
+    <span>2025</span>
+</footer>
+
+<a href="impress.html" class="impress-link" data-i18n="footer.impress">Impressum</a>
+
+<a href="matrix.html" class="rabbit-hole">
+    <span class="rabbit-text" data-i18n="footer.rabbit_text">Coaching · Mentoring · Beratung</span>
+    <span class="rabbit-arrow">&#9654;</span>
+</a>
+
+<script src="i18n.js"></script>
+<script>
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+function setTheme(dark) {
+    if (dark) body.classList.add('dark');
+    else body.classList.remove('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+const saved = localStorage.getItem('theme');
+if (saved === 'dark') setTheme(true);
+toggle.addEventListener('click', () => setTheme(!body.classList.contains('dark')));
+</script>
+
 </body>
 </html>
