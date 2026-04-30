@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simon – The Rabbit Hole</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    /* Standard (Matrix OFF): Dark Card — neutral/bläulich */
+    --bg: #050508;
+    --bg-elevated: #0c0c10;
+    --surface: rgba(255,255,255,0.045);
+    --surface-border: rgba(255,255,255,0.09);
+    --surface-hover: rgba(255,255,255,0.07);
+    --text: #f0f0f5;
+    --text-secondary: #8e8e93;
+    --text-muted: #636366;
+    --accent: #2997ff;
+    --accent-hover: #4dabff;
+    --accent-bg: rgba(41,151,255,0.12);
+    --divider: rgba(255,255,255,0.07);
+    --shadow: rgba(0,0,0,0.5);
+    --shadow-hover: rgba(0,0,0,0.7);
+    font-size:16px;
+}
+body.matrix-active {
+    --bg: #000000;
+    --bg-elevated: #001100;
+    --surface: rgba(0,20,0,0.75);
+    --surface-border: rgba(0,255,65,0.25);
+    --surface-hover: rgba(0,255,65,0.08);
+    --text: #e8ffe8;
+    --text-secondary: #00aa2a;
+    --text-muted: #007a1e;
+    --accent: #00ff41;
+    --accent-hover: #66ff88;
+    --accent-bg: rgba(0,255,65,0.12);
+    --divider: rgba(0,255,65,0.12);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+canvas { position:fixed; inset:0; width:100vw; height:100vh; z-index:1; pointer-events:none; }
+
+/* Back link */
+.back-link {
+    position:fixed; top:1.1rem; left:1.1rem; z-index:100;
+    font-family:'Space Mono', monospace; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--text-secondary); text-decoration:none; transition:color .3s; padding:.3rem .6rem; border-radius:.3rem;
+    background:var(--bg-elevated); border:1px solid var(--surface-border);
+}
+.back-link:hover { color:var(--text); border-color:rgba(255,255,255,0.12); }
+
+/* Container */
+main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:5rem 1.5rem; }
+.card { width:min(680px,92vw); }
+.card-inner {
+    backdrop-filter:blur(24px) saturate(1.3);
+    -webkit-backdrop-filter:blur(24px) saturate(1.3);
+    background:var(--surface); border:1px solid var(--surface-border); border-radius:.8rem;
+    padding:2.2rem 2rem; box-shadow:0 8px 32px var(--shadow); transition:box-shadow .3s;
+}
+.card-inner:hover { box-shadow:0 12px 40px var(--shadow-hover); }
+
+/* Profile */
+.profile-section { display:flex; align-items:center; gap:1.2rem; margin-bottom:1.8rem; text-align:left; }
+.avatar { width:80px; height:80px; border-radius:.6rem; overflow:hidden; border:2px solid var(--surface-border); flex-shrink:0; transition:border-color .3s; }
+.avatar:hover { border-color:rgba(255,255,255,0.12); }
+.avatar img { width:100%; height:100%; object-fit:cover; }
+.name { font-size:1.8rem; font-weight:800; letter-spacing:-.03em; line-height:1.1; margin-bottom:.25rem; color:var(--text); }
+.tagline { font-size:.9rem; color:var(--text-muted); margin-bottom:.5rem; }
+.quote-line { font-size:.82rem; color:var(--text-secondary); font-style:italic; margin-top:.25rem; line-height:1.5; }
+.tags {
+    display:flex; flex-wrap:wrap; gap:.4rem; margin-top:-.1rem; margin-bottom:.5rem;
+}
+.tag {
+    font-family:'Space Mono', monospace; font-size:.68rem; font-weight:700;
+    letter-spacing:.05em; color:var(--accent); background:var(--bg-elevated);
+    border:1px solid var(--surface-border); padding:.18rem .55rem; border-radius:.3rem;
+    transition:border-color .3s, background .3s; cursor:default;
+}
+.tag:hover { border-color:rgba(255,255,255,0.12); background:var(--surface-hover); }
+
+/* Accordion */
+.btn {
+    display:inline-block; font-family:'Space Mono', monospace; font-size:.78rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.06em; padding:.55rem 1.2rem; border-radius:.4rem;
+    text-decoration:none; transition:all .3s; border:1px solid var(--accent); color:var(--accent); background:transparent;
+}
+.btn:hover { background:var(--accent); color:#000; }
+.btn-header { margin-left:auto; align-self:flex-start; margin-top:.3rem; flex-shrink:0; }
+
+/* Accordion */
+.accordion { display:flex; flex-direction:column; gap:.55rem; }
+.accordion-item {
+    background:var(--bg-elevated); border:1px solid var(--surface-border); border-radius:.6rem;
+    overflow:hidden; transition:background .3s, border-color .3s, transform .25s, box-shadow .25s;
+}
+.accordion-item:hover { background:var(--surface-hover); border-color:rgba(255,255,255,0.12); transform:translateY(-1px); box-shadow:0 4px 16px var(--shadow-hover); }
+.accordion-item[open] { background:var(--surface-hover); border-color:rgba(255,255,255,0.15); }
+.accordion-item summary {
+    list-style:none; cursor:pointer; padding:.85rem 1.1rem; display:flex; align-items:center; gap:.7rem;
+    font-size:.9rem; font-weight:600; user-select:none; color:var(--text); font-family:'Inter', sans-serif;
+}
+.accordion-item summary::-webkit-details-marker { display:none; }
+.accordion-item summary .icon { font-size:1.15rem; opacity:.7; transition:transform .3s, opacity .2s; }
+.accordion-item summary .label { flex:1; }
+.accordion-item summary .toggle { font-family:'Space Mono', monospace; font-size:.8rem; color:var(--text-muted); transition:color .2s; white-space:nowrap; }
+.accordion-item[open] summary .toggle { color:var(--accent); }
+.accordion-item[open] summary .icon { transform:scale(1.15); opacity:1; }
+.accordion-item .content { padding:.2rem 1.1rem 1.1rem; font-size:.88rem; line-height:1.7; color:var(--text-secondary); animation:content-in .3s ease both; }
+.accordion-item .content p { text-align:justify; }
+@keyframes content-in { from{opacity:0;transform:translateY(-4px)} to{opacity:1;transform:translateY(0)} }
+
+/* Contact */
+.contact { margin-top:1.5rem; text-align:center; }
+.contact-label { font-family:'Space Mono', monospace; font-size:.7rem; font-weight:700; color:var(--text-muted); margin-right:.5rem; }
+.contact a {
+    font-family:'Space Mono', monospace; font-size:.8rem; font-weight:700;
+    color:var(--text-muted); text-decoration:none; transition:color .3s;
+    border-bottom:1px solid var(--surface-border); padding-bottom:.15rem;
+}
+.contact a:hover { color:var(--accent-hover); border-color:var(--accent-hover); }
+
+.card-bg-toggle { margin-bottom:1rem; margin-top:-.2rem; }
+.bg-toggle-wrap {
+    display:flex; align-items:center; gap:.6rem; margin-top:.5rem;
+}
+.bg-toggle {
+    position:relative; width:26px; height:14px; display:inline-block; cursor:pointer;
+}
+.bg-toggle input { opacity:0; width:0; height:0; }
+.bg-toggle-slider {
+    position:absolute; inset:0; background:rgba(255,255,255,0.12); border-radius:999px;
+    transition:background .25s;
+    border:1px solid var(--surface-border);
+}
+.bg-toggle-slider::before {
+    content:''; position:absolute; height:10px; width:10px; left:1px; top:1px;
+    background:var(--text); border-radius:50%; transition:transform .25s;
+}
+.bg-toggle input:checked + .bg-toggle-slider { background:var(--accent-bg); border-color:var(--accent); opacity:.6; }
+.bg-toggle input:checked + .bg-toggle-slider::before { transform:translateX(12px); background:var(--accent); }
+.bg-toggle-label {
+    font-family:'Space Mono', monospace; font-size:.68rem; font-weight:700;
+    letter-spacing:.05em; color:var(--text-muted); user-select:none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-thumb { background:rgba(255,255,255,0.1); border-radius:2px; }
+
+/* Responsive */
+@media(min-width:900px) { main { justify-content:flex-start; padding-left:4vw; } }
+@media(max-width:560px) {
+    main { padding:4rem 1.2rem; }
+    .card-inner { padding:1.6rem; }
+    .name { font-size:1.5rem; }
+    .avatar { width:64px; height:64px; }
+    .profile-section { flex-wrap:wrap; gap:.8rem; }
+    .btn-header { margin-left:0; margin-top:0; width:100%; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">&larr; Back</a>
+<canvas id="landscape-canvas"></canvas>
+
+<main>
+  <div class="card">
+    <div class="card-inner">
+      <div class="bg-toggle-wrap card-bg-toggle">
+        <label class="bg-toggle">
+          <input type="checkbox" id="bg-toggle">
+          <span class="bg-toggle-slider"></span>
+        </label>
+        <span class="bg-toggle-label">Enter The Matrix</span>
+      </div>
+      <div class="profile-section">
+        <div class="avatar"><img src="avatar.jpg" alt="Profilbild"></div>
+        <div>
+          <h1 class="name">Simon</h1>
+          <p class="tagline">Dortmund</p>
+          <div class="tags">
+            <span class="tag">Thinker.</span>
+            <span class="tag">Lifter.</span>
+            <span class="tag">Optimizer.</span>
+          </div>
+          <p class="quote-line"><em>"Wie schon der große Philosoph Mick Jagger sagte: 'You can't always get what you want.'" — Dr. House</em></p>
+        </div>
+        <a href="#contact" class="btn btn-header">Schreib mir</a>
+      </div>
+
+      <div class="accordion">
+        <details class="accordion-item">
+          <summary><span class="icon">俺</span><span class="label">Über mich</span><span class="toggle">[+]</span></summary>
+          <div class="content">
+            <p>Die Welt ist komplex, deshalb beschäftige ich mich damit, Probleme zu lösen, Systeme zu optimieren und Pläne zu schmieden. Meine Welt dreht sich um Technik, Japan, Anime, Theologie und Vibecoding — also Dinge zu bauen, die funktionieren und sich gut anfühlen. Ohne feste Regeln. Ohne Bullshit.</p>
+          </div>
+        </details>
+
+        <details class="accordion-item">
+          <summary><span class="icon">師</span><span class="label">Mentoring</span><span class="toggle">[+]</span></summary>
+          <div class="content">
+            <p>Begleitung bei akademischen Arbeiten — von der ersten Idee bis zur Abgabe.</p>
+            <p>Fokus auf Kompetenzerleben und Kreativität, Motivation und Freude bei der Ausführung. Best-practice Einsatz von KI als Skill der Zukunft.</p>
+          </div>
+        </details>
+
+        <details class="accordion-item">
+          <summary><span class="icon">導</span><span class="label">Coaching</span><span class="toggle">[+]</span></summary>
+          <div class="content">
+            <p>Krafttraining, das dir dient — nicht umgekehrt. Seit Jahren im Gym unterwegs, mit Fokus auf schweres Krafttraining im Powerlifting-Stil. Ich helfe dir bei der Auswahl eines Plans, der zu dir passt, an der sauberen Übungsausführung und einer smarten Sporternährung.</p>
+            <p>Ganzheitliche Trainingsberatung statt Copy-Paste-Programme. Der Ansatz: gesunde Gewohnheiten aufbauen und Spaß am Prozess haben. Der ständige Kampf gegen sich selbst ist ein Spiel, das man meist verliert — besser nachhaltig und konstant.</p>
+          </div>
+        </details>
+
+        <details class="accordion-item">
+          <summary><span class="icon">談</span><span class="label">Beratung</span><span class="toggle">[+]</span></summary>
+          <div class="content">
+            <p>Hilfe bei den kleinen und großen Dingen des Alltags — von Finanztipps über Technikexpertise bis zur Kaufberatung. Kein Guru-Talk, sondern pragmatische Einblicke, die direkt anwendbar sind.</p>
+            <p>Mein Fokus liegt auf Rechercheskills entwickeln und Selbstbefähigung. Das Ziel: dich in die Lage versetzen, eigenständig bessere Entscheidungen zu treffen — für einen optimierten Alltag auf Augenhöhe.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="contact" id="contact">
+        <span class="contact-label">Kontakt:</span>
+        <a href="mailto:info@simonfiller.eu">info@simonfiller.eu</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+/* === Matrix Digital Rain (discrete stepping) === */
+const c = document.getElementById('landscape-canvas');
+const x = c.getContext('2d');
+const CELL_W = 22;
+const CELL_H = 22;
+const K = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポ';
+const L = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+function rc(){const p=Math.random()<0.85?K:L;return p[Math.floor(Math.random()*p.length)];}
+let cols, drops, W, H, running=false, animFrameId=null;
+function resize(){
+  W=window.innerWidth; H=window.innerHeight;
+  c.width=W; c.height=H;
+  cols=Math.ceil(W/CELL_W);
+  drops=[];
+  for(let i=0;i<cols;i++){
+    const headRow = -Math.floor(Math.random()*H/CELL_H)-Math.floor(Math.random()*30);
+    const len = 10+Math.floor(Math.random()*22);
+    const interval = 2+Math.floor(Math.random()*5);
+    const chars=[];
+    for(let j=0;j<len;j++) chars.push({ch:rc(),age:0,mut:5+Math.floor(Math.random()*12)});
+    drops.push({x:i*CELL_W+2,headRow:headRow,interval:interval,tick:Math.floor(Math.random()*interval),len:len,chars:chars,dead:false});
+  }
+  if(!running){ x.fillStyle='#050508'; x.fillRect(0,0,W,H); }
+}
+window.addEventListener('resize', resize);
+function draw(){
+  x.fillStyle='rgba(0,0,0,0.22)';
+  x.fillRect(0,0,W,H);
+  for(let i=0;i<drops.length;i++){
+    const d=drops[i];
+    d.tick++;
+    if(d.tick>=d.interval){
+      d.tick=0; d.headRow++;
+      d.chars.unshift({ch:rc(),age:0,mut:5+Math.floor(Math.random()*12)});
+      if(d.chars.length>d.len) d.chars.pop();
+    }
+    for(let j=0;j<d.chars.length;j++){
+      const ch=d.chars[j];
+      ch.age++;
+      const row=d.headRow-j;
+      const ty=row*CELL_H;
+      if(ty<-CELL_H||ty>H+CELL_H) continue;
+      if(ch.age>ch.mut){ch.ch=rc();ch.age=0;ch.mut=5+Math.floor(Math.random()*15);}
+      if(j===0){x.font='bold 16px "Noto Sans JP","Courier New",monospace';x.fillStyle='#e8ffe8';x.fillText(ch.ch,d.x,ty);}
+      else if(j<3){x.font='16px "Noto Sans JP","Courier New",monospace';x.fillStyle='rgba(100,255,130,'+(0.9-j*0.25)+')';x.fillText(ch.ch,d.x,ty);}
+      else if(j<d.len){const a=0.55-(j-3)*0.04;if(a<=0)continue;x.font='16px "Noto Sans JP","Courier New",monospace';x.fillStyle='rgba(0,200,50,'+a+')';x.fillText(ch.ch,d.x,ty);}
+    }
+    if((d.headRow-d.len)*CELL_H>H+CELL_H){
+      d.headRow=-Math.floor(Math.random()*20);d.interval=2+Math.floor(Math.random()*5);d.len=10+Math.floor(Math.random()*22);
+      d.chars=[];for(let j=0;j<d.len;j++)d.chars.push({ch:rc(),age:0,mut:5+Math.floor(Math.random()*12)});
+    }
+  }
+}
+function tick(){ if(!running) return; draw(); animFrameId=requestAnimationFrame(tick); }
+resize();
+
+const bgToggle=document.getElementById('bg-toggle');
+bgToggle.addEventListener('change',()=>{
+  running=bgToggle.checked;
+  if(running){ document.body.classList.add('matrix-active'); tick(); }
+  else {
+    document.body.classList.remove('matrix-active');
+    if(animFrameId){ cancelAnimationFrame(animFrameId); animFrameId=null; }
+    x.fillStyle='var(--bg)'; x.fillRect(0,0,W,H);
+  }
+});
+
+/* Accordion */
+document.querySelectorAll('.accordion-item').forEach(function(item){
+  item.addEventListener('toggle',function(){
+    const t=item.querySelector('.toggle');
+    if(item.open)t.textContent='[-]';else t.textContent='[+]';});
+});
+</script>
+
+</body>
+</html>
