@@ -119,6 +119,20 @@ main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex
 .accordion-item[open] summary .icon { transform:scale(1.15); opacity:1; }
 .accordion-item .content { padding:.2rem 1.1rem 1.1rem; font-size:.88rem; line-height:1.7; color:var(--text-secondary); animation:content-in .3s ease both; }
 .accordion-item .content p { text-align:justify; }
+
+/* Wiki link styled like an accordion summary, but it's just a link */
+.wiki-link {
+    display:flex; align-items:center; gap:.7rem;
+    padding:.85rem 1.1rem;
+    font-size:.9rem; font-weight:600;
+    color:var(--text); text-decoration:none;
+    font-family:'Inter', sans-serif;
+}
+.wiki-link .icon { font-size:1.15rem; opacity:.7; transition:transform .3s, opacity .2s; }
+.wiki-link .label { flex:1; }
+.wiki-link .toggle { font-family:'Space Mono', monospace; font-size:.9rem; color:var(--text-muted); transition:transform .3s, color .2s; }
+.wiki-link:hover .icon { transform:scale(1.15); opacity:1; }
+.wiki-link:hover .toggle { color:var(--accent); transform:translateX(4px); }
 @keyframes content-in { from{opacity:0;transform:translateY(-4px)} to{opacity:1;transform:translateY(0)} }
 
 /* Contact */
@@ -232,6 +246,10 @@ main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex
             <p>Statt fertiger Antworten zeig ich dir, wo ich nachgeguckt hätte und worauf zu achten ist, damit du beim nächsten Mal nicht wieder fragen musst.</p>
           </div>
         </details>
+
+        <a class="accordion-item wiki-link" href="wiki.html">
+          <span class="icon">本</span><span class="label">Wiki &amp; Empfehlungen</span><span class="toggle">→</span>
+        </a>
       </div>
 
       <div class="contact" id="contact">
@@ -306,7 +324,7 @@ bgToggle.addEventListener('change',()=>{
   else {
     document.body.classList.remove('matrix-active');
     if(animFrameId){ cancelAnimationFrame(animFrameId); animFrameId=null; }
-    x.fillStyle='var(--bg)'; x.fillRect(0,0,W,H);
+    x.clearRect(0,0,W,H);
   }
 });
 

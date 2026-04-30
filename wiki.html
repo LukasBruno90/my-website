@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simons Wiki – Empfehlungssammlung</title>
+<meta name="description" content="Simons persönliche Empfehlungssammlung im Wiki-Stil: Filme, Bücher, Podcasts, Tools und mehr. Quellen, woher mein Wissen kommt.">
+<meta name="author" content="Simon Filler">
+<meta property="og:title" content="Simons Wiki – Empfehlungssammlung">
+<meta property="og:description" content="Persönliche Empfehlungssammlung: Filme, Bücher, Podcasts, Tools und mehr.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #f8f7f3;
+    --bg-elevated: #ffffff;
+    --text: #202122;
+    --text-secondary: #54595d;
+    --text-muted: #72777d;
+    --link: #0645ad;
+    --link-visited: #0b0080;
+    --link-hover: #3366bb;
+    --border: #c8ccd1;
+    --border-soft: #eaecf0;
+    --box-bg: #f8f9fa;
+    --box-border: #a2a9b1;
+    --hatnote-bg: #fcfcfc;
+    font-size: 16px;
+}
+body.dark {
+    --bg: #1a1a1c;
+    --bg-elevated: #222226;
+    --text: #e8e6e3;
+    --text-secondary: #a8a8a8;
+    --text-muted: #888;
+    --link: #6ea3ff;
+    --link-visited: #b18aff;
+    --link-hover: #9bbcff;
+    --border: #3a3a3f;
+    --border-soft: #2a2a2e;
+    --box-bg: #25252a;
+    --box-border: #3a3a3f;
+    --hatnote-bg: #1f1f22;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    min-height: 100vh;
+    transition: background .3s, color .3s;
+}
+
+/* ─── Top bar ─── */
+.top-bar {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-elevated);
+    padding: .6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: .8rem;
+    transition: background .3s, border-color .3s;
+}
+.top-bar a {
+    color: var(--link);
+    text-decoration: none;
+}
+.top-bar a:hover { text-decoration: underline; }
+.top-bar .spacer { flex: 1; }
+.theme-btn {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: .75rem;
+    padding: .25rem .6rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.theme-btn:hover { background: var(--box-bg); color: var(--text); }
+
+/* ─── Layout ─── */
+main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+/* ─── Hatnote ─── */
+.hatnote {
+    background: var(--hatnote-bg);
+    border-left: 3px solid var(--border);
+    padding: .5rem .9rem;
+    font-size: .85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+.hatnote a { color: var(--link); }
+
+/* ─── Headings ─── */
+h1, h2, h3 {
+    font-family: 'Crimson Pro', 'Linux Libertine', Georgia, serif;
+    font-weight: 600;
+    color: var(--text);
+}
+h1 {
+    font-size: 2.2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: .35rem;
+    margin-bottom: .3rem;
+    line-height: 1.2;
+}
+.subtitle {
+    font-size: .9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+h2 {
+    font-size: 1.6rem;
+    border-bottom: 1px solid var(--border-soft);
+    padding-bottom: .3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+/* ─── Toc box ─── */
+.toc {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    padding: .8rem 1.2rem 1rem;
+    margin: 1.5rem 0 2rem;
+    display: inline-block;
+    min-width: 280px;
+    max-width: 100%;
+}
+.toc-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: .4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-soft);
+    padding-bottom: .2rem;
+}
+.toc ol {
+    list-style-position: inside;
+    font-size: .9rem;
+    padding-left: .3rem;
+}
+.toc ol ol {
+    padding-left: 1.4rem;
+    margin-top: .15rem;
+    font-size: .85rem;
+}
+.toc li { margin: .15rem 0; }
+.toc a {
+    color: var(--link);
+    text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* ─── Body text & links ─── */
+p { margin-bottom: .9rem; font-size: .95rem; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; color: var(--link-hover); }
+a:visited { color: var(--link-visited); }
+body.dark a:visited { color: var(--link-visited); }
+
+ul.refs {
+    list-style: none;
+    padding-left: 0;
+    margin: .5rem 0 1rem;
+}
+ul.refs li {
+    padding: .35rem 0;
+    border-bottom: 1px dashed var(--border-soft);
+    font-size: .92rem;
+}
+ul.refs li:last-child { border-bottom: none; }
+ul.refs .comment {
+    display: block;
+    color: var(--text-secondary);
+    font-size: .85rem;
+    margin-top: .15rem;
+    font-style: italic;
+}
+
+/* ─── Stub-Box (Platzhalter) ─── */
+.stub {
+    background: var(--box-bg);
+    border: 1px solid var(--border-soft);
+    padding: .7rem .9rem;
+    font-size: .85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    border-radius: 2px;
+    margin: .5rem 0 1rem;
+}
+.stub::before {
+    content: "📝 ";
+    font-style: normal;
+}
+
+/* ─── Footer ─── */
+.footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: .8rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* ─── Edit-Spaß ─── */
+.fake-edit {
+    font-size: .75rem;
+    color: var(--link);
+    text-decoration: none;
+    margin-left: .4rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    vertical-align: middle;
+}
+.fake-edit:hover { text-decoration: underline; }
+.fake-edit::before { content: "["; }
+.fake-edit::after { content: "]"; }
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+    main { padding: 1.5rem 1rem 3rem; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.35rem; }
+    h3 { font-size: 1.1rem; }
+    .toc { min-width: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="matrix.html">← Zurück zum Rabbit Hole</a>
+    <span class="spacer"></span>
+    <button class="theme-btn" id="theme-toggle" aria-label="Theme wechseln">Dark / Light</button>
+</div>
+
+<main>
+
+<div class="hatnote">
+    Nicht zu verwechseln mit der <a href="https://de.wikipedia.org" target="_blank" rel="noopener">echten Wikipedia</a>. Diese Seite wird ausschließlich von einer einzigen Person gepflegt, die nicht immer Lust dazu hat.
+</div>
+
+<h1>Simons Wiki <a href="#" class="fake-edit" onclick="alert('Bearbeiten ist Simons Privileg.'); return false;">Bearbeiten</a></h1>
+<p class="subtitle">Aus der freien Empfehlungssammlung, die so frei ist, wie eine Person allein sie machen kann.</p>
+
+<p>Diese Seite sammelt Sachen, die ich gut finde, und gleichzeitig die Quellen, aus denen ich vieles von dem habe, was ich in Coaching, Mentoring und Beratung erzähle. Im Sinne der Transparenz: niemand denkt sich seine Meinungen ganz allein aus, ich auch nicht. Hier steht, woher's kommt.</p>
+
+<!-- ─── TOC ─── -->
+<div class="toc">
+    <div class="toc-title">Inhaltsverzeichnis</div>
+    <ol>
+        <li><a href="#konsum">Konsum &amp; Lernen</a>
+            <ol>
+                <li><a href="#serien">Serien</a></li>
+                <li><a href="#filme">Filme</a></li>
+                <li><a href="#anime">Anime</a></li>
+                <li><a href="#buecher">Bücher</a></li>
+                <li><a href="#podcasts">Podcasts</a></li>
+                <li><a href="#youtube">YouTube-Kanäle</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#blogs">Blogs &amp; Artikel</a></li>
+                <li><a href="#dokus">Dokumentationen</a></li>
+            </ol>
+        </li>
+        <li><a href="#tools">Tools &amp; Software</a>
+            <ol>
+                <li><a href="#apps">Apps</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#hardware">Hardware</a></li>
+            </ol>
+        </li>
+        <li><a href="#themen">Themenspezifisch</a>
+            <ol>
+                <li><a href="#krafttraining">Krafttraining</a></li>
+                <li><a href="#wissenschaft">Promotion &amp; Wissenschaft</a></li>
+                <li><a href="#finanzen">Finanzen</a></li>
+                <li><a href="#ki">KI &amp; Prompting</a></li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="konsum">Konsum &amp; Lernen</h2>
+<p>Sachen, die man lesen, hören oder gucken kann. Geordnet nach Konsumform, nicht nach Wichtigkeit.</p>
+
+<h3 id="serien">Serien</h3>
+<div class="stub">Hier kommen Serien rein, die ich gut finde. Folgt.</div>
+
+<h3 id="filme">Filme</h3>
+<div class="stub">Filme, die hängengeblieben sind. Folgt.</div>
+
+<h3 id="anime">Anime</h3>
+<div class="stub">Folgt. Wahrscheinlich der längste Abschnitt.</div>
+
+<h3 id="buecher">Bücher</h3>
+<div class="stub">Sach- und Belletristik gemischt. Folgt.</div>
+
+<h3 id="podcasts">Podcasts</h3>
+<div class="stub">Was ich beim Spazierengehen oder Bügeln höre. Folgt.</div>
+
+<h3 id="youtube">YouTube-Kanäle</h3>
+<div class="stub">Kanäle, bei denen ich auch ohne Algorithmus reinschaue. Folgt.</div>
+
+<h3 id="newsletter">Newsletter</h3>
+<div class="stub">Was tatsächlich in meinem Postfach landet, ohne dass ich es bereue. Folgt.</div>
+
+<h3 id="blogs">Blogs &amp; Artikel</h3>
+<div class="stub">Einzelne Texte und Blogs, zu denen ich immer wieder zurückkomme. Folgt.</div>
+
+<h3 id="dokus">Dokumentationen</h3>
+<div class="stub">Dokus, die etwas hinterlassen haben. Folgt.</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="tools">Tools &amp; Software</h2>
+<p>Was ich täglich oder regelmäßig benutze und weiterempfehlen würde.</p>
+
+<h3 id="apps">Apps</h3>
+<div class="stub">Mobile Apps, die mir den Alltag erleichtern. Folgt.</div>
+
+<h3 id="software">Software</h3>
+<div class="stub">Desktop- und Web-Tools, mit denen ich arbeite. Folgt.</div>
+
+<h3 id="hardware">Hardware</h3>
+<div class="stub">Geräte, die ich besitze und gut finde. Folgt.</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<h2 id="themen">Themenspezifisch</h2>
+<p>Quellen für die Themen, zu denen ich auch coache, mentore oder berate. Hier wird's konkret: woher die Empfehlungen kommen, die ich anderen mitgebe.</p>
+
+<h3 id="krafttraining">Krafttraining</h3>
+<div class="stub">Programme, Coaches, Bücher zur Sportwissenschaft. Folgt.</div>
+
+<h3 id="wissenschaft">Promotion &amp; Wissenschaft</h3>
+<div class="stub">Methodenliteratur, Schreibratgeber, Tools fürs wissenschaftliche Arbeiten. Folgt.</div>
+
+<h3 id="finanzen">Finanzen</h3>
+<div class="stub">Quellen, an denen ich mich orientiere, wenn's um ETFs, Steuern und Co. geht. Folgt.</div>
+
+<h3 id="ki">KI &amp; Prompting</h3>
+<div class="stub">Was ich selbst nutze und was ich zum Thema lese. Folgt.</div>
+
+<!-- ─── Footer ─── -->
+<div class="footer">
+    Diese Seite wurde zuletzt bearbeitet, als Simon Lust hatte. Inhalt steht unter „verwende es, wie du willst, aber denk selber mit".
+</div>
+
+</main>
+
+<script>
+const toggle = document.getElementById('theme-toggle');
+const body = document.body;
+function setTheme(dark) {
+    if (dark) body.classList.add('dark');
+    else body.classList.remove('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+}
+const saved = localStorage.getItem('theme');
+if (saved === 'dark') setTheme(true);
+toggle.addEventListener('click', () => setTheme(!body.classList.contains('dark')));
+</script>
+
+</body>
+</html>
