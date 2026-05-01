@@ -13,6 +13,15 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+    try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+    } catch(e){}
+})();
+</script>
 <style>
 :root {
     --bg: #f8f7f3;
@@ -30,7 +39,7 @@
     --hatnote-bg: #fcfcfc;
     font-size: 16px;
 }
-body.dark {
+html.dark {
     --bg: #1a1a1c;
     --bg-elevated: #222226;
     --text: #e8e6e3;
@@ -180,7 +189,7 @@ p { margin-bottom: .9rem; font-size: .95rem; }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; color: var(--link-hover); }
 a:visited { color: var(--link-visited); }
-body.dark a:visited { color: var(--link-visited); }
+html.dark a:visited { color: var(--link-visited); }
 
 ul.refs {
     list-style: none;
@@ -375,15 +384,19 @@ ul.refs .comment {
 
 <script>
 const toggle = document.getElementById('theme-toggle');
-const body = document.body;
-function setTheme(dark) {
-    if (dark) body.classList.add('dark');
-    else body.classList.remove('dark');
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
+const root = document.documentElement;
+const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+function setTheme(dark, persist) {
+    root.classList.toggle('dark', dark);
+    if (persist) localStorage.setItem('theme', dark ? 'dark' : 'light');
 }
-const saved = localStorage.getItem('theme');
-if (saved === 'dark') setTheme(true);
-toggle.addEventListener('click', () => setTheme(!body.classList.contains('dark')));
+
+toggle.addEventListener('click', () => setTheme(!root.classList.contains('dark'), true));
+
+media.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) setTheme(e.matches, false);
+});
 </script>
 
 </body>

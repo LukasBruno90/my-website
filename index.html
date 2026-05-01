@@ -14,7 +14,16 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
+    <script>
+    (function(){
+        try {
+            var saved = localStorage.getItem('theme');
+            var dark = saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            if (dark) document.documentElement.classList.add('dark');
+        } catch(e){}
+    })();
+    </script>
 </head>
 <body>
 
@@ -168,15 +177,19 @@
 <script src="i18n.js"></script>
 <script>
 const toggle = document.getElementById('theme-toggle');
-const body = document.body;
-function setTheme(dark) {
-    if (dark) body.classList.add('dark');
-    else body.classList.remove('dark');
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
+const root = document.documentElement;
+const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+function setTheme(dark, persist) {
+    root.classList.toggle('dark', dark);
+    if (persist) localStorage.setItem('theme', dark ? 'dark' : 'light');
 }
-const saved = localStorage.getItem('theme');
-if (saved === 'dark') setTheme(true);
-toggle.addEventListener('click', () => setTheme(!body.classList.contains('dark')));
+
+toggle.addEventListener('click', () => setTheme(!root.classList.contains('dark'), true));
+
+media.addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) setTheme(e.matches, false);
+});
 </script>
 
 </body>
