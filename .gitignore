@@ -19,3 +19,4 @@ desktop.ini
 node_modules/
 dist/
 build/
+.claude/settings.local.json
