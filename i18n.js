@@ -63,7 +63,8 @@ const I18N_TRANSLATIONS = {
       "lead": "Für Forschungsfragen, Kooperationen oder einfach Hallo sagen.",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
-      "social_linkedin": "LinkedIn"
+      "social_linkedin": "LinkedIn",
+      "social_instagram": "Instagram"
     },
     "footer": {
       "rabbit_text": "Coaching · Mentoring · Beratung",
@@ -134,7 +135,8 @@ const I18N_TRANSLATIONS = {
       "lead": "For research questions, collaborations or just saying hello.",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
-      "social_linkedin": "LinkedIn"
+      "social_linkedin": "LinkedIn",
+      "social_instagram": "Instagram"
     },
     "footer": {
       "rabbit_text": "Coaching · Mentoring · Consulting",
