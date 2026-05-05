@@ -71,6 +71,22 @@ const I18N_TRANSLATIONS = {
       "rabbit_text": "Coaching · Mentoring · Beratung",
       "impress": "Impressum"
     },
+    "matrix": {
+      "quote": "\"Wie schon der große Philosoph Mick Jagger sagte: 'You can't always get what you want.'\" — Dr. House",
+      "about_label": "Über mich",
+      "about_body": "Ich tüftle gern an Dingen rum, an Problemen, Systemen, Plänen. Hängen bleibe ich an Technik, Japan, Anime, Theologie und Vibecoding. Also Sachen bauen, die funktionieren und sich gut anfühlen. Manchmal klappt das auf Anhieb, manchmal endet's in drei Stunden Stack Overflow.",
+      "mentoring_label": "Mentoring",
+      "mentoring_body1": "Begleitung bei Hausarbeiten, Bachelor- oder Masterthesis, von der ersten Panik vor der Themenwahl bis zum Abgabe-Knopf.",
+      "mentoring_body2": "Schwerpunkt: dass der Prozess sich nicht wie Strafarbeit anfühlt und du am Ende sagen kannst „das hab ich geschrieben\". KI darf mitspielen, aber so, dass dein:e Prof beim Lesen nicht nervös wird.",
+      "coaching_label": "Coaching",
+      "coaching_body1": "Seit Jahren regelmäßig im Gym, Schwerpunkt schweres Krafttraining im Powerlifting-Stil. Ich helf dir, einen Plan zu finden, der zu dir passt, dabei sauber zu heben (Knie nicht nach innen, Rücken keine Banane) und nicht alle zwei Wochen das System zu wechseln, weil auf Instagram was Neues kursiert.",
+      "coaching_body2": "Plus: Essen, das deinen Trainingseinsatz nicht sabotiert. Ziel ist nicht, sich täglich selbst zu besiegen, das verliert man meistens. Ziel ist, dranzubleiben.",
+      "advice_label": "Beratung",
+      "advice_body1": "Hilfe bei den Sachen, bei denen man als Erwachsene:r angeblich eigenständig durchblickt: ETF oder lieber nicht? Welches Handy? Lohnt sich der Stromanbieter-Wechsel?",
+      "advice_body2": "Statt fertiger Antworten zeig ich dir, wo ich nachgeguckt hätte und worauf zu achten ist, damit du beim nächsten Mal nicht wieder fragen musst.",
+      "status_label": "Status:",
+      "status_note": "aktuell keine Slots verfügbar"
+    },
     "lang": { "toggle": "EN" }
   },
   "en": {
@@ -143,6 +159,22 @@ const I18N_TRANSLATIONS = {
     "footer": {
       "rabbit_text": "Coaching · Mentoring · Consulting",
       "impress": "Legal Notice"
+    },
+    "matrix": {
+      "quote": "\"As the great philosopher Mick Jagger said: 'You can't always get what you want.'\" — Dr. House",
+      "about_label": "About me",
+      "about_body": "I like tinkering with things, problems, systems, plans. I get stuck on tech, Japan, anime, theology and vibecoding. Building stuff that works and feels right. Sometimes it clicks on the first try, sometimes it ends in three hours of Stack Overflow.",
+      "mentoring_label": "Mentoring",
+      "mentoring_body1": "Support for term papers, bachelor's or master's theses, from the first panic about picking a topic all the way to clicking submit.",
+      "mentoring_body2": "The focus: making sure the process doesn't feel like detention and you can honestly say at the end 'I wrote this'. AI can play along, but in a way that doesn't make your professor nervous while reading.",
+      "coaching_label": "Coaching",
+      "coaching_body1": "I've been in the gym regularly for years, focused on heavy strength training in a powerlifting style. I'll help you find a plan that fits you, lift cleanly (knees out, back not bent like a banana) and not switch your whole system every two weeks because something new is trending on Instagram.",
+      "coaching_body2": "Plus: food that doesn't sabotage all the work you put in. The goal isn't to beat yourself daily, you mostly lose that fight. The goal is to keep showing up.",
+      "advice_label": "Advice",
+      "advice_body1": "Help with the stuff you're supposedly meant to figure out on your own as an adult: ETF or maybe not? Which phone? Is switching power supplier actually worth it?",
+      "advice_body2": "Instead of finished answers I'll show you where I would have looked and what to watch out for, so next time you won't have to ask again.",
+      "status_label": "Status:",
+      "status_note": "currently no slots available"
     },
     "lang": { "toggle": "DE" }
   }

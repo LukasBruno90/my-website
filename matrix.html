@@ -60,6 +60,15 @@ canvas { position:fixed; inset:0; width:100vw; height:100vh; z-index:1; pointer-
 }
 .back-link:hover { color:var(--text); border-color:rgba(255,255,255,0.12); }
 
+/* Lang toggle */
+.lang-toggle-matrix {
+    position:fixed; top:1.1rem; right:1.1rem; z-index:100;
+    font-family:'Space Mono', monospace; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--text-secondary); cursor:pointer; transition:color .3s; padding:.3rem .6rem; border-radius:.3rem;
+    background:var(--bg-elevated); border:1px solid var(--surface-border);
+}
+.lang-toggle-matrix:hover { color:var(--text); border-color:rgba(255,255,255,0.12); }
+
 /* Container */
 main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:5rem 1.5rem; }
 .card { width:min(680px,92vw); }
@@ -144,6 +153,10 @@ main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex
     border-bottom:1px solid var(--surface-border); padding-bottom:.15rem;
 }
 .contact a:hover { color:var(--accent-hover); border-color:var(--accent-hover); }
+.contact-note {
+    font-family:'Space Mono', monospace; font-size:.8rem; font-weight:700;
+    color:var(--text-muted); letter-spacing:.02em;
+}
 
 .card-bg-toggle { margin-bottom:1rem; margin-top:-.2rem; }
 .bg-toggle-wrap {
@@ -188,6 +201,7 @@ main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex
 <body>
 
 <a href="index.html" class="back-link">&larr; Back</a>
+<button class="lang-toggle-matrix" data-lang-toggle aria-label="Sprache wechseln">EN</button>
 <canvas id="landscape-canvas"></canvas>
 
 <main>
@@ -210,40 +224,39 @@ main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex
             <span class="tag">Lifter.</span>
             <span class="tag">Optimizer.</span>
           </div>
-          <p class="quote-line"><em>"Wie schon der große Philosoph Mick Jagger sagte: 'You can't always get what you want.'" — Dr. House</em></p>
+          <p class="quote-line"><em data-i18n="matrix.quote">"Wie schon der große Philosoph Mick Jagger sagte: 'You can't always get what you want.'" — Dr. House</em></p>
         </div>
-        <a href="#contact" class="btn btn-header">Schreib mir</a>
       </div>
 
       <div class="accordion">
         <details class="accordion-item">
-          <summary><span class="icon">俺</span><span class="label">Über mich</span><span class="toggle">[+]</span></summary>
+          <summary><span class="icon">俺</span><span class="label" data-i18n="matrix.about_label">Über mich</span><span class="toggle">[+]</span></summary>
           <div class="content">
-            <p>Ich tüftle gern an Dingen rum, an Problemen, Systemen, Plänen. Hängen bleibe ich an Technik, Japan, Anime, Theologie und Vibecoding. Also Sachen bauen, die funktionieren und sich gut anfühlen. Manchmal klappt das auf Anhieb, manchmal endet's in drei Stunden Stack Overflow.</p>
+            <p data-i18n="matrix.about_body">Ich tüftle gern an Dingen rum, an Problemen, Systemen, Plänen. Hängen bleibe ich an Technik, Japan, Anime, Theologie und Vibecoding. Also Sachen bauen, die funktionieren und sich gut anfühlen. Manchmal klappt das auf Anhieb, manchmal endet's in drei Stunden Stack Overflow.</p>
           </div>
         </details>
 
         <details class="accordion-item">
-          <summary><span class="icon">師</span><span class="label">Mentoring</span><span class="toggle">[+]</span></summary>
+          <summary><span class="icon">師</span><span class="label" data-i18n="matrix.mentoring_label">Mentoring</span><span class="toggle">[+]</span></summary>
           <div class="content">
-            <p>Begleitung bei Hausarbeiten, Bachelor- oder Masterthesis, von der ersten Panik vor der Themenwahl bis zum Abgabe-Knopf.</p>
-            <p>Schwerpunkt: dass der Prozess sich nicht wie Strafarbeit anfühlt und du am Ende sagen kannst „das hab ich geschrieben". KI darf mitspielen, aber so, dass dein:e Prof beim Lesen nicht nervös wird.</p>
+            <p data-i18n="matrix.mentoring_body1">Begleitung bei Hausarbeiten, Bachelor- oder Masterthesis, von der ersten Panik vor der Themenwahl bis zum Abgabe-Knopf.</p>
+            <p data-i18n="matrix.mentoring_body2">Schwerpunkt: dass der Prozess sich nicht wie Strafarbeit anfühlt und du am Ende sagen kannst „das hab ich geschrieben". KI darf mitspielen, aber so, dass dein:e Prof beim Lesen nicht nervös wird.</p>
           </div>
         </details>
 
         <details class="accordion-item">
-          <summary><span class="icon">導</span><span class="label">Coaching</span><span class="toggle">[+]</span></summary>
+          <summary><span class="icon">導</span><span class="label" data-i18n="matrix.coaching_label">Coaching</span><span class="toggle">[+]</span></summary>
           <div class="content">
-            <p>Seit Jahren regelmäßig im Gym, Schwerpunkt schweres Krafttraining im Powerlifting-Stil. Ich helf dir, einen Plan zu finden, der zu dir passt, dabei sauber zu heben (Knie nicht nach innen, Rücken keine Banane) und nicht alle zwei Wochen das System zu wechseln, weil auf Instagram was Neues kursiert.</p>
-            <p>Plus: Essen, das deinen Trainingseinsatz nicht sabotiert. Ziel ist nicht, sich täglich selbst zu besiegen, das verliert man meistens. Ziel ist, dranzubleiben.</p>
+            <p data-i18n="matrix.coaching_body1">Seit Jahren regelmäßig im Gym, Schwerpunkt schweres Krafttraining im Powerlifting-Stil. Ich helf dir, einen Plan zu finden, der zu dir passt, dabei sauber zu heben (Knie nicht nach innen, Rücken keine Banane) und nicht alle zwei Wochen das System zu wechseln, weil auf Instagram was Neues kursiert.</p>
+            <p data-i18n="matrix.coaching_body2">Plus: Essen, das deinen Trainingseinsatz nicht sabotiert. Ziel ist nicht, sich täglich selbst zu besiegen, das verliert man meistens. Ziel ist, dranzubleiben.</p>
           </div>
         </details>
 
         <details class="accordion-item">
-          <summary><span class="icon">談</span><span class="label">Beratung</span><span class="toggle">[+]</span></summary>
+          <summary><span class="icon">談</span><span class="label" data-i18n="matrix.advice_label">Beratung</span><span class="toggle">[+]</span></summary>
           <div class="content">
-            <p>Hilfe bei den Sachen, bei denen man als Erwachsene:r angeblich eigenständig durchblickt: ETF oder lieber nicht? Welches Handy? Lohnt sich der Stromanbieter-Wechsel?</p>
-            <p>Statt fertiger Antworten zeig ich dir, wo ich nachgeguckt hätte und worauf zu achten ist, damit du beim nächsten Mal nicht wieder fragen musst.</p>
+            <p data-i18n="matrix.advice_body1">Hilfe bei den Sachen, bei denen man als Erwachsene:r angeblich eigenständig durchblickt: ETF oder lieber nicht? Welches Handy? Lohnt sich der Stromanbieter-Wechsel?</p>
+            <p data-i18n="matrix.advice_body2">Statt fertiger Antworten zeig ich dir, wo ich nachgeguckt hätte und worauf zu achten ist, damit du beim nächsten Mal nicht wieder fragen musst.</p>
           </div>
         </details>
 
@@ -255,8 +268,8 @@ main { position:relative; z-index:10; width:100%; min-height:100vh; display:flex
       </div>
 
       <div class="contact" id="contact">
-        <span class="contact-label">Kontakt:</span>
-        <a href="mailto:info@simonfiller.eu">info@simonfiller.eu</a>
+        <span class="contact-label" data-i18n="matrix.status_label">Status:</span>
+        <span class="contact-note" data-i18n="matrix.status_note">aktuell keine Slots verfügbar</span>
       </div>
     </div>
   </div>
@@ -337,6 +350,7 @@ document.querySelectorAll('.accordion-item').forEach(function(item){
     if(item.open)t.textContent='[-]';else t.textContent='[+]';});
 });
 </script>
+<script src="i18n.js"></script>
 
 </body>
 </html>
