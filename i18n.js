@@ -39,7 +39,7 @@ const I18N_TRANSLATIONS = {
       "diss_link": "Mehr erfahren",
       "talktrace_tag": "Software",
       "talktrace_status": "Aktiv",
-      "talktrace_title": "TalkTrace AI neo",
+      "talktrace_title": "TalkTrace AI base",
       "talktrace_body": "Software zur Analyse verbaler Interaktionen. Sie basiert auf Shiny für Python und nutzt Large Language Models, um quantitative Metriken und qualitative Kodierungen von transkribierten Dialogen zu erstellen und als strukturierte Berichte zu exportieren.",
       "talktrace_dev": "(in Entwicklung)",
       "lars_tag": "OER-Projekt",
@@ -56,6 +56,7 @@ const I18N_TRANSLATIONS = {
       "pub1_title": "Vorstellung LArS-Modul A: Einstiegsphase",
       "pub1_venue": "In: Gronostay, D., Manzel, S., Hahn-Laudenberg, K., Teuwsen, J. (Hrsg.) Professionelle Unterrichtswahrnehmung im sozialwissenschaftlichen Fachunterricht. Politische Bildung. Springer VS, Wiesbaden.",
       "pub2_venue": "Preprint, Zenodo.",
+      "pub3_venue": "Preprint, Zenodo.",
       "doi": "DOI"
     },
     "contact": {
@@ -128,7 +129,7 @@ const I18N_TRANSLATIONS = {
       "diss_link": "Learn more",
       "talktrace_tag": "Software",
       "talktrace_status": "Active",
-      "talktrace_title": "TalkTrace AI neo",
+      "talktrace_title": "TalkTrace AI base",
       "talktrace_body": "Software for analysing verbal interactions. Based on Shiny for Python, it uses Large Language Models to generate quantitative metrics and qualitative codings from transcribed dialogues and export them as structured reports.",
       "talktrace_dev": "(under development)",
       "lars_tag": "OER Project",
@@ -145,6 +146,7 @@ const I18N_TRANSLATIONS = {
       "pub1_title": "Vorstellung LArS-Modul A: Einstiegsphase",
       "pub1_venue": "Gronostay, D., Manzel, S., Hahn-Laudenberg, K., Teuwsen, J. (Hrsg.)",
       "pub2_venue": "Preprint, Zenodo.",
+      "pub3_venue": "Preprint, Zenodo.",
       "doi": "DOI"
     },
     "contact": {
