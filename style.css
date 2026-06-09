@@ -47,6 +47,17 @@ html.dark {
 html { scroll-behavior:smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 ::selection { background:var(--accent); color:#fff; }
+
+/* ─── Skip Link (A11y) ─── */
+.skip-link {
+    position:absolute; top:-100px; left:1rem; z-index:9999;
+    background:var(--accent); color:#fff;
+    padding:.7rem 1.1rem; border-radius:.4rem;
+    text-decoration:none; font-weight:500; font-size:.9rem;
+    font-family:'Inter', sans-serif;
+    transition:top .2s ease;
+}
+.skip-link:focus { top:1rem; outline:2px solid var(--accent); outline-offset:2px; }
 html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
 body {
     font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;

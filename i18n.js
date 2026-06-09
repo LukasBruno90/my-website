@@ -2,6 +2,7 @@
 const I18N_TRANSLATIONS = {
   "de": {
     "nav": { "about": "Über", "research": "Forschung", "publications": "Publikationen", "engagement": "Engagement", "contact": "Kontakt" },
+    "skip": { "to_content": "Zum Inhalt springen" },
     "hero": {
       "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Promovend Empirische Politikdidaktik",
       "bio": "Empirische Lehr-Lern-Forschung, standardisierte Videostudien, Argumentation und Urteilsbildung im Politikunterricht.",
@@ -70,6 +71,7 @@ const I18N_TRANSLATIONS = {
       "label": "Kontakt",
       "title": "Schreib mir",
       "lead": "Für Forschungsfragen, Kooperationen oder einfach Hallo sagen.",
+      "mailto": "mailto:lukas.brandt@tu-dortmund.de?subject=Anfrage über lukasbrandt.de",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
       "social_linkedin": "LinkedIn"
@@ -81,6 +83,7 @@ const I18N_TRANSLATIONS = {
   },
   "en": {
     "nav": { "about": "About", "research": "Research", "publications": "Publications", "engagement": "Engagement", "contact": "Contact" },
+    "skip": { "to_content": "Skip to content" },
     "hero": {
       "role": "M.Ed. · Research Associate · Doctoral Researcher in Empirical Civic Education",
       "bio": "Empirical teaching-learning research, standardised video studies, argumentation and judgement formation in civic education.",
@@ -149,6 +152,7 @@ const I18N_TRANSLATIONS = {
       "label": "Contact",
       "title": "Get in touch",
       "lead": "For research questions, collaborations or just saying hello.",
+      "mailto": "mailto:lukas.brandt@tu-dortmund.de?subject=Inquiry via lukasbrandt.de",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
       "social_linkedin": "LinkedIn"

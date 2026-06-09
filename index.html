@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="stylesheet" href="style.css?v=14">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -67,6 +67,8 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main" data-i18n="skip.to_content">Zum Inhalt springen</a>
+
 <nav class="top-nav">
     <div class="nav-left">
         <button id="theme-toggle" class="theme-toggle" aria-label="Theme wechseln">
@@ -85,7 +87,7 @@
     <div class="nav-spacer"></div>
 </nav>
 
-<main>
+<main id="main">
 
 <!-- HERO -->
 <section class="hero" id="about">
@@ -225,7 +227,7 @@
         <p class="section-label" data-i18n="contact.label">Kontakt</p>
         <h2 class="section-title" data-i18n="contact.title">Schreib mir</h2>
         <p class="contact-lead" data-i18n="contact.lead">Für Forschungsfragen, Kooperationen oder einfach Hallo sagen.</p>
-        <a href="mailto:lukas.brandt@tu-dortmund.de" class="contact-big">lukas.brandt@tu-dortmund.de</a>
+        <a href="mailto:lukas.brandt@tu-dortmund.de?subject=Anfrage über lukasbrandt.de" data-i18n="contact.mailto" data-i18n-attr="href" class="contact-big">lukas.brandt@tu-dortmund.de</a>
         <div class="contact-social">
             <a href="https://orcid.org/0000-0003-4199-9554" target="_blank" rel="noopener" data-i18n="contact.social_orcid">ORCID</a>
             <a href="https://www.researchgate.net/profile/Lukas-Brandt-2" target="_blank" rel="noopener" data-i18n="contact.social_researchgate">ResearchGate</a>
@@ -244,7 +246,7 @@
 
 <a href="impress.html" class="impress-link" data-i18n="footer.impress">Impressum</a>
 
-<script src="i18n.js?v=5"></script>
+<script src="i18n.js?v=6"></script>
 <script>
 const toggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
