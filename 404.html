@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 – Seite nicht gefunden – Lukas Brandt</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<script>
+(function(){
+    try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+    } catch(e){}
+})();
+</script>
+<style>
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0055ff;
+    --divider: rgba(0,0,0,0.07);
+}
+html.dark {
+    --bg: #0d0d0f;
+    --surface: #1c1c20;
+    --text: #f5f5f7;
+    --text-secondary: #86868b;
+    --accent: #2997ff;
+    --divider: rgba(255,255,255,0.07);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; transition:background .3s, color .3s; }
+::selection { background:var(--accent); color:#fff; }
+
+main {
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:2rem 1.5rem; text-align:center;
+}
+.code {
+    font-family:'Space Mono', monospace;
+    font-size:.75rem; font-weight:400;
+    letter-spacing:.2em; text-transform:uppercase;
+    color:var(--text-secondary);
+    margin-bottom:1.2rem;
+}
+h1 {
+    font-size:clamp(3rem, 8vw, 5rem);
+    font-weight:800; letter-spacing:-.04em;
+    line-height:1; margin-bottom:1rem;
+    color:var(--text);
+}
+p {
+    font-size:1.05rem; color:var(--text-secondary);
+    max-width:36rem; margin:0 auto 2.5rem;
+}
+a.btn {
+    display:inline-block;
+    padding:.75rem 1.5rem;
+    background:var(--accent); color:#fff;
+    text-decoration:none; font-weight:500; font-size:.95rem;
+    border-radius:.5rem;
+    transition:background .2s, transform .2s;
+}
+a.btn:hover { background:var(--text); transform:translateY(-1px); }
+html.dark a.btn:hover { background:var(--accent); opacity:.85; }
+</style>
+</head>
+<body>
+
+<main>
+    <p class="code">Error 404</p>
+    <h1>Seite nicht gefunden.</h1>
+    <p>Diese Seite gibt es leider nicht (mehr). Vielleicht hat sich der Link verändert oder es ist ein Tippfehler passiert.</p>
+    <a href="/" class="btn">← Zurück zur Startseite</a>
+</main>
+
+</body>
+</html>
