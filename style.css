@@ -230,15 +230,7 @@ html.dark .research-status--ended {
     transition:border-color .3s;
 }
 
-/* ─── Rabbit Hole ─── */
-.rabbit-hole {
-    position:fixed; bottom:1.2rem; right:1.2rem; z-index:200;
-    display:flex; align-items:center; gap:.4rem;
-    padding:.4rem .8rem; background:transparent; border:1px solid var(--divider); border-radius:.4rem;
-    color:var(--text-secondary); font-size:.7rem; font-weight:400; text-decoration:none; letter-spacing:.05em;
-    transition:all .3s ease; font-family:'Space Mono', monospace;
-    animation:rabbit-in .8s cubic-bezier(.22,1,.36,1) 1.2s both;
-}
+/* ─── Impress Link ─── */
 .impress-link {
     position:fixed; bottom:1.2rem; left:1.2rem; z-index:200;
     display:flex; align-items:center; gap:.4rem;
@@ -247,11 +239,47 @@ html.dark .research-status--ended {
     transition:all .3s ease; font-family:'Space Mono', monospace;
     animation:impress-in .8s cubic-bezier(.22,1,.36,1) 1.2s both;
 }
-@keyframes rabbit-in { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 @keyframes impress-in { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
-.rabbit-hole:hover { color:var(--text); border-color:var(--text-secondary); }
 .impress-link:hover { color:var(--text); border-color:var(--text-secondary); }
-.rabbit-arrow { font-size:.5rem; opacity:.5; }
+
+/* ─── Engagement ─── */
+.engagement-grid {
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:3rem;
+    margin-top:2.5rem;
+}
+.engagement-col-title {
+    font-family:'Space Mono', monospace;
+    font-size:.7rem; font-weight:400;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:var(--text-secondary);
+    margin-bottom:1.2rem;
+}
+.engagement-list { list-style:none; padding:0; margin:0; }
+.engagement-list li {
+    padding:.9rem 0;
+    border-top:1px solid var(--divider);
+    font-size:.92rem; line-height:1.55;
+    color:var(--text);
+    transition:border-color .3s;
+}
+.engagement-list li:last-child {
+    border-bottom:1px solid var(--divider);
+}
+.eng-year {
+    display:inline-block;
+    font-family:'Space Mono', monospace;
+    font-size:.7rem; color:var(--text-secondary);
+    letter-spacing:.05em;
+    margin-right:.8rem;
+    min-width:2.4rem;
+}
+.eng-detail { color:var(--text); }
+
+@media(max-width:760px){
+    .engagement-grid { grid-template-columns:1fr; gap:2.2rem; }
+}
 
 /* ─── Responsive ─── */
 @media(max-width:560px){
@@ -261,7 +289,6 @@ html.dark .research-status--ended {
     .nav-link { font-size:.65rem; }
     .section-subtitle, .hero-bio { font-size:.95rem; }
     .services-grid { grid-template-columns:1fr; }
-    .rabbit-hole { bottom:1rem; right:1rem; padding:.45rem .8rem; font-size:.7rem; }
     .impress-link { bottom:1rem; left:1rem; padding:.45rem .8rem; font-size:.7rem; }
     .theme-toggle { width:32px; height:32px; }
     .theme-toggle .icon-sun, .theme-toggle .icon-moon { font-size:14px; }

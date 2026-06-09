@@ -1,13 +1,12 @@
 /* ===== i18n System ===== */
 const I18N_TRANSLATIONS = {
   "de": {
-    "nav": { "about": "Über", "research": "Forschung", "publications": "Publikationen", "contact": "Kontakt" },
+    "nav": { "about": "Über", "research": "Forschung", "publications": "Publikationen", "engagement": "Engagement", "contact": "Kontakt" },
     "hero": {
-      "name": "Simon Filler",
-      "role": "M.Ed. · Promovend Empirische Politikdidaktik",
-      "bio": "Unterrichtsforschung, KI in Forschung und Lehre, Politikdidaktik.",
+      "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Promovend Empirische Politikdidaktik",
+      "bio": "Empirische Lehr-Lern-Forschung, standardisierte Videostudien, Argumentation und Urteilsbildung im Politikunterricht.",
       "affiliation": "Technische Universität Dortmund",
-      "affiliation2": "Didaktik der Sozialwissenschaften",
+      "affiliation2": "Institut für Didaktik integrativer Fächer · Didaktik der Sozialwissenschaften",
       "cta_primary": "Schreib mir",
       "cta_secondary": "Forschung ansehen"
     },
@@ -17,47 +16,54 @@ const I18N_TRANSLATIONS = {
       "year_now": "heute"
     },
     "roles": {
-      "comenedes": "Mitarbeiter",
       "diss": "Promotionsstudent",
-      "talktrace": "Entwickler",
-      "lars": "Koordination"
+      "cornelsen": "Mitautor",
+      "wahlrecht": "Projektkoordination & wissenschaftliche Mitarbeit"
     },
     "research": {
       "label": "Forschung",
       "title": "Projekte",
-      "subtitle": "Dissertation, Projektbeteiligung und aktuelle Arbeiten.",
-      "comenedes_tag": "Projekt",
-      "comenedes_status": "Aktiv",
-      "comenedes_title": "ComeNEDeS",
-      "comenedes_body": "Das Projekt ComeNEDeS_NRW entwickelt phasenübergreifende Kooperationsstrukturen zwischen Hochschulen und dem staatlichen Lehrerfortbildungssystem in NRW. Im Teilprojekt „Demokratie“ an der TU Dortmund werden Fortbildungskonzepte für Lehrkräfte der Sozialwissenschaften, Wirtschaft-Politik und Gesellschaftslehre systematisiert und erprobt.",
-      "comenedes_link1": "Mehr erfahren",
-      "comenedes_link2": "Teilprojekt Demokratie",
+      "subtitle": "Dissertation, Projektbeteiligung und Lehrwerksarbeit.",
       "diss_tag": "Dissertationsprojekt",
       "diss_status": "Aktiv",
-      "diss_title": "Wahlen im Fokus",
-      "diss_body": "Entwicklung und Erprobung von Kooperationsskripten im Politikunterricht. Fokus auf kognitive Aktivierung und politische Urteilsbildung bei Schüler*innen der 8. Jahrgangsstufe. Mixed-Methods-Design mit Wissenstests, Kleingruppen-Videographie und Arbeitsheften.",
+      "diss_title": "Kooperation und Wettbewerb in argumentativen Lehr-Lern-Prozessen",
+      "diss_body": "Quasi-experimentelle Videostudie zur Wirkung kooperativer vs. kompetitiver Diskussionsformate auf die politische Urteilskompetenz. 16 Gymnasialklassen in NRW durchlaufen eine siebenstündige Unterrichtsreihe zur Absenkung des Wahlalters; in der abschließenden Fishbowl-Diskussion werden mündliche Argumentation, schriftliche Urteilsqualität und Fachwissenszuwachs erfasst.",
       "diss_link": "Mehr erfahren",
-      "talktrace_tag": "Software",
-      "talktrace_status": "Aktiv",
-      "talktrace_title": "TalkTrace AI base",
-      "talktrace_body": "Software zur Analyse verbaler Interaktionen. Sie basiert auf Shiny für Python und nutzt Large Language Models, um quantitative Metriken und qualitative Kodierungen von transkribierten Dialogen zu erstellen und als strukturierte Berichte zu exportieren.",
-      "talktrace_dev": "(in Entwicklung)",
-      "lars_tag": "OER-Projekt",
-      "lars_status": "Beendet",
-      "lars_title": "LArS.nrw",
-      "lars_body": "Lernen mit Animationsfilmen realer Unterrichtsszenen. Im Projekt entstanden 24 Animationsfilme (3–6 Min.), Comics und umfangreiche Materialien für die universitäre Lehramtsbildung. Reale Videos zeigen typische Interaktionen und fördern professionelle Wahrnehmungsfähigkeiten.",
-      "lars_link1": "Mehr erfahren",
-      "lars_link2": "Projektwebsite"
+      "cornelsen_tag": "Lehrwerk",
+      "cornelsen_status": "Beendet",
+      "cornelsen_title": "Wirtschaft und Politik – Differenzierende Ausgabe NRW",
+      "cornelsen_body": "Sechs Schulbücher und Handreichungen für die Jahrgangsstufen 5–10 der differenzierenden NRW-Ausgabe, erschienen zwischen 2021 und 2023 im Cornelsen Verlag.",
+      "cornelsen_link": "Zur Reihe",
+      "wahlrecht_tag": "Forschungsprojekt",
+      "wahlrecht_status": "Beendet",
+      "wahlrecht_title": "(K)ein Wahlrecht für Kinder und Jugendliche?!",
+      "wahlrecht_body": "Lehrstuhl-Projekt unter Leitung von Prof. Dr. Dorothee Gronostay zur Förderung von Politikkompetenz anhand der Kontroverse um die Absenkung des Wahlalters auf 16 Jahre. Konzeption und videografische Erhebung einer siebenstündigen Unterrichtsreihe in 16 Klassen an sieben Gymnasien in Nordrhein-Westfalen."
     },
     "publications": {
       "label": "Publikationen",
       "title": "Ausgewählte Beiträge",
-      "subtitle": "Zeitschriftenartikel und Tagungsbeiträge.",
-      "pub1_title": "Vorstellung LArS-Modul A: Einstiegsphase",
-      "pub1_venue": "In: Gronostay, D., Manzel, S., Hahn-Laudenberg, K., Teuwsen, J. (Hrsg.) Professionelle Unterrichtswahrnehmung im sozialwissenschaftlichen Fachunterricht. Politische Bildung. Springer VS, Wiesbaden.",
-      "pub2_venue": "Preprint, Zenodo.",
-      "pub3_venue": "Preprint, Zenodo.",
-      "doi": "DOI"
+      "subtitle": "Zeitschriftenartikel und Buchbeiträge.",
+      "pub1_title": "Vom offenen Unterrichtsklima zur Wahlabsicht: Welche Rolle spielen Wissen und Selbstkonzept?",
+      "pub1_venue": "Im Erscheinen in: Reintjes, C.; Nonte, S. (Hrsg.), Wissenstransfer zwischen Bildungsforschung, Bildungspraxis und Lehrer*innenbildung. Münster: Waxmann.",
+      "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …\" – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
+      "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Hrsg.), Mündigkeit. Zur Debatte über ein unverzichtbares Bildungsideal. Frankfurt am Main: Wochenschau Verlag.",
+      "pub3_title": "Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen? Eine quasi-experimentelle Videostudie im Politikunterricht.",
+      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Hrsg.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag."
+    },
+    "engagement": {
+      "label": "Engagement",
+      "title": "Mitgliedschaften & Vorträge",
+      "subtitle": "Fachgesellschaften und ausgewählte internationale Beiträge.",
+      "memberships_title": "Mitgliedschaften",
+      "talks_title": "Ausgewählte Vorträge",
+      "mem1": "American Educational Research Association (AERA) — SIG 150 „Democratic Citizenship in Education\"",
+      "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 13 „Moral and Democratic Education\" und SIG 26 „Argumentation, Dialogue and Reasoning\"",
+      "mem3": "Gesellschaft für Empirische Bildungsforschung (GEBF)",
+      "mem4": "Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung (GPJE)",
+      "talk1": "GPJE-AK Fachunterrichtsforschung Politik, Halle-Wittenberg: „Schriftliche Urteile im Politikunterricht\"",
+      "talk2": "Conflict and Controversy in the Classroom (Mitorganisation), Freie Universität Amsterdam",
+      "talk3": "JURE Conference (EARLI), Porto: „Competitive vs. cooperative classroom discussions\"",
+      "talk4": "GEBF-Jahrestagung, Bamberg: „Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?\""
     },
     "contact": {
       "label": "Kontakt",
@@ -65,39 +71,20 @@ const I18N_TRANSLATIONS = {
       "lead": "Für Forschungsfragen, Kooperationen oder einfach Hallo sagen.",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
-      "social_linkedin": "LinkedIn",
-      "social_instagram": "Instagram"
+      "social_linkedin": "LinkedIn"
     },
     "footer": {
-      "rabbit_text": "Coaching · Mentoring · Beratung",
       "impress": "Impressum"
-    },
-    "matrix": {
-      "quote": "\"Wie schon der große Philosoph Mick Jagger sagte: 'You can't always get what you want.'\" — Dr. House",
-      "about_label": "Über mich",
-      "about_body": "Ich tüftle gern an Dingen rum, an Problemen, Systemen, Plänen. Hängen bleibe ich an Technik, Japan, Anime, Theologie und Vibecoding. Also Sachen bauen, die funktionieren und sich gut anfühlen. Manchmal klappt das auf Anhieb, manchmal endet's in drei Stunden Stack Overflow.",
-      "mentoring_label": "Mentoring",
-      "mentoring_body1": "Begleitung bei Hausarbeiten, Bachelor- oder Masterthesis, von der ersten Panik vor der Themenwahl bis zum Abgabe-Knopf.",
-      "mentoring_body2": "Schwerpunkt: dass der Prozess sich nicht wie Strafarbeit anfühlt und du am Ende sagen kannst „das hab ich geschrieben\". KI darf mitspielen, aber so, dass dein:e Prof beim Lesen nicht nervös wird.",
-      "coaching_label": "Coaching",
-      "coaching_body1": "Seit Jahren regelmäßig im Gym, Schwerpunkt schweres Krafttraining im Powerlifting-Stil. Ich helf dir, einen Plan zu finden, der zu dir passt, dabei sauber zu heben (Knie nicht nach innen, Rücken keine Banane) und nicht alle zwei Wochen das System zu wechseln, weil auf Instagram was Neues kursiert.",
-      "coaching_body2": "Plus: Essen, das deinen Trainingseinsatz nicht sabotiert. Ziel ist nicht, sich täglich selbst zu besiegen, das verliert man meistens. Ziel ist, dranzubleiben.",
-      "advice_label": "Beratung",
-      "advice_body1": "Hilfe bei den Sachen, bei denen man als Erwachsene:r angeblich eigenständig durchblickt: ETF oder lieber nicht? Welches Handy? Lohnt sich der Stromanbieter-Wechsel?",
-      "advice_body2": "Statt fertiger Antworten zeig ich dir, wo ich nachgeguckt hätte und worauf zu achten ist, damit du beim nächsten Mal nicht wieder fragen musst.",
-      "status_label": "Status:",
-      "status_note": "aktuell keine Slots verfügbar"
     },
     "lang": { "toggle": "EN" }
   },
   "en": {
-    "nav": { "about": "About", "research": "Research", "publications": "Publications", "contact": "Contact" },
+    "nav": { "about": "About", "research": "Research", "publications": "Publications", "engagement": "Engagement", "contact": "Contact" },
     "hero": {
-      "name": "Simon Filler",
-      "role": "M.Ed. · PhD Candidate Empirical Civic Education",
-      "bio": "Educational research, AI in research and teaching, civic education.",
+      "role": "M.Ed. · Research Associate · Doctoral Researcher in Empirical Civic Education",
+      "bio": "Empirical teaching-learning research, standardised video studies, argumentation and judgement formation in civic education.",
       "affiliation": "TU Dortmund University",
-      "affiliation2": "Social Science Education",
+      "affiliation2": "Institute for the Didactics of Integrative Subjects · Social Science Education",
       "cta_primary": "Get in touch",
       "cta_secondary": "View research"
     },
@@ -107,47 +94,54 @@ const I18N_TRANSLATIONS = {
       "year_now": "present"
     },
     "roles": {
-      "comenedes": "Staff Member",
-      "diss": "PhD Student",
-      "talktrace": "Developer",
-      "lars": "Coordination"
+      "diss": "Doctoral Researcher",
+      "cornelsen": "Co-author",
+      "wahlrecht": "Project Coordination & Research Associate"
     },
     "research": {
       "label": "Research",
       "title": "Projects",
-      "subtitle": "Dissertation, project participation and current work.",
-      "comenedes_tag": "Project",
-      "comenedes_status": "Active",
-      "comenedes_title": "ComeNEDeS",
-      "comenedes_body": "The ComeNEDeS_NRW project develops cross-phase cooperation structures between universities and the state teacher education system in North Rhine-Westphalia. In the 'Democracy' sub-project at TU Dortmund, training concepts for teachers of social sciences, economics-politics and social studies are systematised and tested.",
-      "comenedes_link1": "Learn more",
-      "comenedes_link2": "Sub-project Democracy",
+      "subtitle": "Dissertation, project work and textbook authorship.",
       "diss_tag": "Dissertation Project",
       "diss_status": "Active",
-      "diss_title": "Focus on Elections",
-      "diss_body": "Development and testing of cooperation scripts in civic education. Focus on cognitive activation and political reasoning in 8th-grade students. Mixed-methods design with knowledge tests, small-group videography and workbooks.",
+      "diss_title": "Cooperation and Competition in Argumentative Teaching-Learning Processes",
+      "diss_body": "Quasi-experimental video study on the impact of cooperative vs. competitive discussion formats on political judgement competency. 16 grammar school classes in North Rhine-Westphalia complete a seven-lesson unit on lowering the voting age; the concluding fishbowl discussion is used to assess oral argumentation, written judgement quality and content knowledge gains.",
       "diss_link": "Learn more",
-      "talktrace_tag": "Software",
-      "talktrace_status": "Active",
-      "talktrace_title": "TalkTrace AI base",
-      "talktrace_body": "Software for analysing verbal interactions. Based on Shiny for Python, it uses Large Language Models to generate quantitative metrics and qualitative codings from transcribed dialogues and export them as structured reports.",
-      "talktrace_dev": "(under development)",
-      "lars_tag": "OER Project",
-      "lars_status": "Completed",
-      "lars_title": "LArS.nrw",
-      "lars_body": "Learning with animation films of real classroom scenes. The project produced 24 animation films (3–6 min), comics and extensive materials for university teacher education. Real videos show typical interactions and promote professional perception skills.",
-      "lars_link1": "Learn more",
-      "lars_link2": "Project website"
+      "cornelsen_tag": "Textbook",
+      "cornelsen_status": "Completed",
+      "cornelsen_title": "Wirtschaft und Politik – Differentiated NRW Edition",
+      "cornelsen_body": "Six textbooks and teacher's guides for grades 5–10 of the differentiated North Rhine-Westphalia edition, published between 2021 and 2023 by Cornelsen Verlag.",
+      "cornelsen_link": "View series",
+      "wahlrecht_tag": "Research Project",
+      "wahlrecht_status": "Completed",
+      "wahlrecht_title": "(K)ein Wahlrecht für Kinder und Jugendliche?!",
+      "wahlrecht_body": "Chair-led project under Prof. Dr. Dorothee Gronostay on fostering political competence through the controversy over lowering the voting age to 16. Design and video-based data collection of a seven-lesson unit in 16 classes at seven grammar schools in North Rhine-Westphalia."
     },
     "publications": {
       "label": "Publications",
       "title": "Selected Contributions",
-      "subtitle": "Journal articles and conference papers.",
-      "pub1_title": "Vorstellung LArS-Modul A: Einstiegsphase",
-      "pub1_venue": "Gronostay, D., Manzel, S., Hahn-Laudenberg, K., Teuwsen, J. (Hrsg.)",
-      "pub2_venue": "Preprint, Zenodo.",
-      "pub3_venue": "Preprint, Zenodo.",
-      "doi": "DOI"
+      "subtitle": "Journal articles and book chapters.",
+      "pub1_title": "From an open classroom climate to voting intentions: What roles do knowledge and self-concept play?",
+      "pub1_venue": "Forthcoming in: Reintjes, C.; Nonte, S. (Eds.), Knowledge Transfer between Educational Research, Educational Practice and Teacher Education. Münster: Waxmann.",
+      "pub2_title": "“The voting age should not be lowered to 16 …” – an analysis of written student judgements on the controversy around voting at 16.",
+      "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Eds.), Maturity. On the debate over an indispensable educational ideal. Frankfurt am Main: Wochenschau.",
+      "pub3_title": "What is the learning outcome of competitive vs. cooperative classroom discussions? A quasi-experimental video study in civic education.",
+      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Eds.), Political Education in a Superdiverse Society (p. 289). Frankfurt am Main: Wochenschau."
+    },
+    "engagement": {
+      "label": "Engagement",
+      "title": "Memberships & Talks",
+      "subtitle": "Learned societies and selected international contributions.",
+      "memberships_title": "Memberships",
+      "talks_title": "Selected Talks",
+      "mem1": "American Educational Research Association (AERA) — SIG 150 “Democratic Citizenship in Education”",
+      "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 13 “Moral and Democratic Education” and SIG 26 “Argumentation, Dialogue and Reasoning”",
+      "mem3": "German Society for Empirical Educational Research (GEBF)",
+      "mem4": "German Society for Civic Education (GPJE)",
+      "talk1": "GPJE Symposium on Civic Education Research, Halle-Wittenberg: “Written Judgements in Civic Education”",
+      "talk2": "Conflict and Controversy in the Classroom (co-organisation), VU Amsterdam",
+      "talk3": "JURE Conference (EARLI), Porto: “Competitive vs. cooperative classroom discussions”",
+      "talk4": "GEBF Annual Conference, Bamberg: “The learning outcomes of competitive vs. cooperative classroom discussions”"
     },
     "contact": {
       "label": "Contact",
@@ -155,28 +149,10 @@ const I18N_TRANSLATIONS = {
       "lead": "For research questions, collaborations or just saying hello.",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
-      "social_linkedin": "LinkedIn",
-      "social_instagram": "Instagram"
+      "social_linkedin": "LinkedIn"
     },
     "footer": {
-      "rabbit_text": "Coaching · Mentoring · Consulting",
       "impress": "Legal Notice"
-    },
-    "matrix": {
-      "quote": "\"As the great philosopher Mick Jagger said: 'You can't always get what you want.'\" — Dr. House",
-      "about_label": "About me",
-      "about_body": "I like tinkering with things, problems, systems, plans. I get stuck on tech, Japan, anime, theology and vibecoding. Building stuff that works and feels right. Sometimes it clicks on the first try, sometimes it ends in three hours of Stack Overflow.",
-      "mentoring_label": "Mentoring",
-      "mentoring_body1": "Support for term papers, bachelor's or master's theses, from the first panic about picking a topic all the way to clicking submit.",
-      "mentoring_body2": "The focus: making sure the process doesn't feel like detention and you can honestly say at the end 'I wrote this'. AI can play along, but in a way that doesn't make your professor nervous while reading.",
-      "coaching_label": "Coaching",
-      "coaching_body1": "I've been in the gym regularly for years, focused on heavy strength training in a powerlifting style. I'll help you find a plan that fits you, lift cleanly (knees out, back not bent like a banana) and not switch your whole system every two weeks because something new is trending on Instagram.",
-      "coaching_body2": "Plus: food that doesn't sabotage all the work you put in. The goal isn't to beat yourself daily, you mostly lose that fight. The goal is to keep showing up.",
-      "advice_label": "Advice",
-      "advice_body1": "Help with the stuff you're supposedly meant to figure out on your own as an adult: ETF or maybe not? Which phone? Is switching power supplier actually worth it?",
-      "advice_body2": "Instead of finished answers I'll show you where I would have looked and what to watch out for, so next time you won't have to ask again.",
-      "status_label": "Status:",
-      "status_note": "currently no slots available"
     },
     "lang": { "toggle": "DE" }
   }

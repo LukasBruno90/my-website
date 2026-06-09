@@ -1,24 +1,24 @@
-# simonfiller.eu
+# lukasbrandt.de
 
-Persönliche Website von Simon Filler — statisches HTML/CSS/JS, kein Build-Schritt.
+Persönliche Website von Lukas Brandt — statisches HTML/CSS/JS, kein Build-Schritt.
 
 ## Struktur
 
 | Datei | Zweck |
 |---|---|
 | `index.html` | Hauptseite: Forschung, Publikationen, Kontakt (DE/EN, Light/Dark) |
-| `matrix.html` | „Rabbit Hole" — Coaching / Mentoring / Beratung |
 | `impress.html` | Impressum |
 | `style.css` | Styles für `index.html` |
 | `i18n.js` | Übersetzungen + Sprachumschaltung für `index.html` |
 | `profile.jpg` | Foto auf der Hauptseite |
-| `avatar.jpg` | Foto auf der Rabbit-Hole-Seite |
+| `favicon.png` | Favicon |
+| `CNAME` | Custom-Domain-Eintrag für GitHub Pages |
 
-`matrix.html` und `impress.html` sind standalone — Styles und Skripte liegen jeweils inline in der Datei.
+`impress.html` ist standalone — Styles liegen inline in der Datei.
 
 ## Lokal ansehen
 
-Reicht jeder beliebige statische Server, z.B.:
+Reicht jeder beliebige statische Server, z. B.:
 
 ```sh
 python -m http.server 8000
@@ -29,10 +29,10 @@ Doppelklick auf `index.html` geht auch, dann blockiert der Browser aber teilweis
 
 ## Deployment
 
-Geplant: Custom Domain `simonfiller.eu`. Konkretes Setup folgt.
+GitHub Pages mit Custom Domain `lukasbrandt.de` (siehe `CNAME`). Nach dem ersten Push: in den Repo-Settings → Pages die Domain registrieren und beim DNS-Provider den `CNAME`-Eintrag setzen.
 
 ## Offene Punkte
 
-- Impressum: Adresse, Telefon, ggf. USt-IdNr. ergänzen
 - Datenschutzerklärung anlegen (Google Fonts werden aktuell vom Google-CDN geladen)
-- Favicon (`favicon.ico` / `favicon.svg`) bereitstellen
+- Favicon ggf. austauschen (aktuell `favicon.png` aus der Vorlage)
+- OG-Image für Social-Media-Previews
