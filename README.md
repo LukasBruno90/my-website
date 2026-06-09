@@ -33,6 +33,4 @@ GitHub Pages mit Custom Domain `lukasbrandt.de` (siehe `CNAME`). Nach dem ersten
 
 ## Offene Punkte
 
-- Datenschutzerklärung anlegen (Google Fonts werden aktuell vom Google-CDN geladen)
-- Favicon ggf. austauschen (aktuell `favicon.png` aus der Vorlage)
 - OG-Image für Social-Media-Previews

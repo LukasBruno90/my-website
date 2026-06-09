@@ -44,11 +44,12 @@ const I18N_TRANSLATIONS = {
       "title": "Ausgewählte Beiträge",
       "subtitle": "Zeitschriftenartikel und Buchbeiträge.",
       "pub1_title": "Vom offenen Unterrichtsklima zur Wahlabsicht: Welche Rolle spielen Wissen und Selbstkonzept?",
-      "pub1_venue": "Im Erscheinen in: Reintjes, C.; Nonte, S. (Hrsg.), Wissenstransfer zwischen Bildungsforschung, Bildungspraxis und Lehrer*innenbildung. Münster: Waxmann.",
+      "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Hrsg.), Empirische Perspektiven aus der Bildungsforschung: Wissenstransfer zwischen Empirie und Praxis. Münster: Waxmann.",
       "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …\" – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
       "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Hrsg.), Mündigkeit. Zur Debatte über ein unverzichtbares Bildungsideal. Frankfurt am Main: Wochenschau Verlag.",
       "pub3_title": "Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen? Eine quasi-experimentelle Videostudie im Politikunterricht.",
-      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Hrsg.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag."
+      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Hrsg.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag.",
+      "doi": "DOI"
     },
     "engagement": {
       "label": "Engagement",
@@ -122,11 +123,12 @@ const I18N_TRANSLATIONS = {
       "title": "Selected Contributions",
       "subtitle": "Journal articles and book chapters.",
       "pub1_title": "From an open classroom climate to voting intentions: What roles do knowledge and self-concept play?",
-      "pub1_venue": "Forthcoming in: Reintjes, C.; Nonte, S. (Eds.), Knowledge Transfer between Educational Research, Educational Practice and Teacher Education. Münster: Waxmann.",
+      "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Eds.), Empirical Perspectives from Educational Research: Knowledge Transfer between Empiricism and Practice. Münster: Waxmann.",
       "pub2_title": "“The voting age should not be lowered to 16 …” – an analysis of written student judgements on the controversy around voting at 16.",
       "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Eds.), Maturity. On the debate over an indispensable educational ideal. Frankfurt am Main: Wochenschau.",
       "pub3_title": "What is the learning outcome of competitive vs. cooperative classroom discussions? A quasi-experimental video study in civic education.",
-      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Eds.), Political Education in a Superdiverse Society (p. 289). Frankfurt am Main: Wochenschau."
+      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Eds.), Political Education in a Superdiverse Society (p. 289). Frankfurt am Main: Wochenschau.",
+      "doi": "DOI"
     },
     "engagement": {
       "label": "Engagement",
