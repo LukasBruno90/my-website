@@ -246,17 +246,20 @@ html.dark .research-status--ended {
     transition:border-color .3s;
 }
 
-/* ─── Impress Link ─── */
+/* ─── Footer Meta (Impressum + Datenschutz) ─── */
 .impress-link {
     position:fixed; bottom:1.2rem; left:1.2rem; z-index:200;
-    display:flex; align-items:center; gap:.4rem;
+    display:flex; align-items:center; gap:.5rem;
     padding:.4rem .8rem; background:transparent; border:1px solid var(--divider); border-radius:.4rem;
-    color:var(--text-secondary); font-size:.7rem; font-weight:400; text-decoration:none; letter-spacing:.05em;
-    transition:all .3s ease; font-family:'Space Mono', monospace;
+    color:var(--text-secondary); font-size:.7rem; font-weight:400; letter-spacing:.05em;
+    transition:border-color .3s; font-family:'Space Mono', monospace;
     animation:impress-in .8s cubic-bezier(.22,1,.36,1) 1.2s both;
 }
+.impress-link a { color:inherit; text-decoration:none; transition:color .2s; }
+.impress-link a:hover { color:var(--text); }
+.impress-link .sep { opacity:.5; }
+.impress-link:hover { border-color:var(--text-secondary); }
 @keyframes impress-in { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
-.impress-link:hover { color:var(--text); border-color:var(--text-secondary); }
 
 /* ─── Engagement ─── */
 .engagement-grid {

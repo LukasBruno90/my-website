@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressum – Lukas Brandt</title>
-<meta name="description" content="Impressum und Anbieterkennzeichnung der Website von Lukas Brandt.">
+<title>Datenschutz – Lukas Brandt</title>
+<meta name="description" content="Datenschutzerklärung der Website von Lukas Brandt.">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.bunny.net">
@@ -24,6 +24,7 @@
 }
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.75; -webkit-font-smoothing:antialiased; }
+::selection { background:var(--accent); color:#fff; }
 
 .back-link {
     position:fixed; top:1.5rem; left:1.5rem; z-index:100;
@@ -46,7 +47,7 @@ main {
     min-height:100vh; display:flex; align-items:center; justify-content:center;
     padding:6rem 1.5rem 4rem;
 }
-.card { width:min(640px,92vw); }
+.card { width:min(720px,92vw); }
 .card-inner {
     background:var(--surface);
     border:1px solid var(--surface-border);
@@ -98,11 +99,6 @@ a:hover { color:var(--accent-hover); }
     margin:1.5rem 0;
 }
 
-.placeholder {
-    color:var(--text-muted); font-style:italic;
-    background:var(--accent-pastel); padding:.1rem .4rem; border-radius:.25rem;
-}
-
 @media(max-width:560px) {
     main { padding:5rem 1rem 3rem; }
     .card-inner { padding:2rem 1.5rem; }
@@ -122,32 +118,38 @@ a:hover { color:var(--accent-hover); }
 <main>
   <div class="card">
     <div class="card-inner">
-      <div class="top-meta"><div class="dot"></div><span>Anbieterkennzeichnung</span></div>
-      <h1>Impressum</h1>
+      <div class="top-meta"><div class="dot"></div><span>Datenschutzerklärung</span></div>
+      <h1>Datenschutz</h1>
       <div class="sep"></div>
 
-      <h2>Name und Anschrift</h2>
+      <h2>1. Verantwortlicher</h2>
       <p>
         Lukas Brandt<br>
         August-Schmidt-Str. 6<br>
-        44227 Dortmund
-      </p>
-
-      <h2>Kontakt</h2>
-      <p>
+        44227 Dortmund<br>
         E-Mail: <a href="mailto:lukas.brandt@tu-dortmund.de">lukas.brandt@tu-dortmund.de</a>
       </p>
 
-      <div class="sep"></div>
+      <h2>2. Hosting und Server-Logfiles</h2>
+      <p>Diese Website wird über GitHub Pages gehostet (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Aufruf der Seite verarbeitet GitHub technische Daten (IP-Adresse, Browser-Kennung, Betriebssystem, Datum und Uhrzeit, abgerufene Ressource) in Server-Logs zur Bereitstellung des Dienstes und Abwehr von Missbrauch. Eine Auswertung dieser Daten durch mich findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website). Details: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
 
-      <h2>Haftung für Inhalte</h2>
-      <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+      <h2>3. Schriftarten</h2>
+      <p>Die Website verwendet Webfonts der BunnyWay d.o.o. (Cesta komandanta Staneta 4A, 1215 Medvode, Slowenien) über fonts.bunny.net. Bunny Fonts liefert die Schriftarten DSGVO-konform aus, ohne IP-Adressen zu loggen oder zu speichern. Details: <a href="https://bunny.net/privacy" target="_blank" rel="noopener">Bunny.net Privacy Policy</a>.</p>
 
-      <h2>Haftung für Links</h2>
-      <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
+      <h2>4. Cookies und lokale Speicherung</h2>
+      <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Im localStorage des Browsers werden ausschließlich zwei Präferenzen lokal gespeichert: die gewählte Sprache (DE/EN) und das Theme (hell/dunkel). Diese Daten verlassen Ihr Gerät nicht und werden mir nicht übermittelt.</p>
 
-      <h2>Urheberrecht</h2>
-      <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
+      <h2>5. Externe Verweise</h2>
+      <p>Die Website enthält Links zu externen Diensten (ORCID, ResearchGate, LinkedIn, Verlagsseiten, DOI-Resolver). Auf deren Datenverarbeitung habe ich keinen Einfluss. Bei Klick gelten die jeweiligen Datenschutzbestimmungen.</p>
+
+      <h2>6. Kontaktaufnahme per E-Mail</h2>
+      <p>Wenn Sie mir eine E-Mail senden, werden die von Ihnen übermittelten Daten (E-Mail-Adresse, Inhalt) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b oder f DSGVO. Die Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+      <h2>7. Ihre Rechte</h2>
+      <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen die Verarbeitung (Art. 21). Beschwerden können Sie bei der zuständigen Aufsichtsbehörde einreichen (für NRW: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestr. 2–4, 40213 Düsseldorf).</p>
+
+      <h2>8. Aktualität</h2>
+      <p>Diese Datenschutzerklärung wird bei Änderungen am Webangebot oder der Rechtslage angepasst.</p>
     </div>
   </div>
 </main>

@@ -5,7 +5,7 @@ const I18N_TRANSLATIONS = {
     "skip": { "to_content": "Zum Inhalt springen" },
     "hero": {
       "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Promovend Empirische Politikdidaktik",
-      "bio": "Empirische Lehr-Lern-Forschung, standardisierte Videostudien, Argumentation und Urteilsbildung im Politikunterricht.",
+      "bio": "Ich erforsche, wie kooperative und kompetitive Diskussionsformate die politische Urteilsbildung im Politikunterricht beeinflussen — videobasiert, quasi-experimentell.",
       "affiliation": "Technische Universität Dortmund",
       "affiliation2": "Institut für Didaktik integrativer Fächer · Didaktik der Sozialwissenschaften",
       "cta_primary": "Schreib mir",
@@ -17,7 +17,7 @@ const I18N_TRANSLATIONS = {
       "year_now": "heute"
     },
     "roles": {
-      "diss": "Promotionsstudent",
+      "diss": "Promovend",
       "cornelsen": "Mitautor",
       "wahlrecht": "Projektkoordination & wissenschaftliche Mitarbeit"
     },
@@ -70,14 +70,15 @@ const I18N_TRANSLATIONS = {
     "contact": {
       "label": "Kontakt",
       "title": "Schreib mir",
-      "lead": "Für Forschungsfragen, Kooperationen oder einfach Hallo sagen.",
+      "lead": "Für Forschungsfragen, Kooperationen, Vorträge oder fachlichen Austausch.",
       "mailto": "mailto:lukas.brandt@tu-dortmund.de?subject=Anfrage über lukasbrandt.de",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
       "social_linkedin": "LinkedIn"
     },
     "footer": {
-      "impress": "Impressum"
+      "impress": "Impressum",
+      "privacy": "Datenschutz"
     },
     "lang": { "toggle": "EN" }
   },
@@ -86,7 +87,7 @@ const I18N_TRANSLATIONS = {
     "skip": { "to_content": "Skip to content" },
     "hero": {
       "role": "M.Ed. · Research Associate · Doctoral Researcher in Empirical Civic Education",
-      "bio": "Empirical teaching-learning research, standardised video studies, argumentation and judgement formation in civic education.",
+      "bio": "I study how cooperative and competitive discussion formats shape political judgement in civic education — video-based, quasi-experimental.",
       "affiliation": "TU Dortmund University",
       "affiliation2": "Institute for the Didactics of Integrative Subjects · Social Science Education",
       "cta_primary": "Get in touch",
@@ -151,14 +152,15 @@ const I18N_TRANSLATIONS = {
     "contact": {
       "label": "Contact",
       "title": "Get in touch",
-      "lead": "For research questions, collaborations or just saying hello.",
+      "lead": "For research questions, collaborations, talks or academic exchange.",
       "mailto": "mailto:lukas.brandt@tu-dortmund.de?subject=Inquiry via lukasbrandt.de",
       "social_orcid": "ORCID",
       "social_researchgate": "ResearchGate",
       "social_linkedin": "LinkedIn"
     },
     "footer": {
-      "impress": "Legal Notice"
+      "impress": "Legal Notice",
+      "privacy": "Privacy"
     },
     "lang": { "toggle": "DE" }
   }
