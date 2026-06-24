@@ -46,7 +46,7 @@ const I18N_TRANSLATIONS = {
       "subtitle": "Zeitschriftenartikel und Buchbeiträge.",
       "pub1_title": "Vom offenen Unterrichtsklima zur Wahlabsicht: Welche Rolle spielen Wissen und Selbstkonzept?",
       "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Hrsg.), Empirische Perspektiven aus der Bildungsforschung: Wissenstransfer zwischen Empirie und Praxis. Münster: Waxmann.",
-      "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …\" – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
+      "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …" – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
       "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Hrsg.), Mündigkeit. Zur Debatte über ein unverzichtbares Bildungsideal. Frankfurt am Main: Wochenschau Verlag.",
       "pub3_title": "Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen? Eine quasi-experimentelle Videostudie im Politikunterricht.",
       "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Hrsg.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag.",
@@ -58,14 +58,14 @@ const I18N_TRANSLATIONS = {
       "subtitle": "Fachgesellschaften und ausgewählte internationale Beiträge.",
       "memberships_title": "Mitgliedschaften",
       "talks_title": "Ausgewählte Vorträge",
-      "mem1": "American Educational Research Association (AERA) — SIG 150 „Democratic Citizenship in Education\"",
-      "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 13 „Moral and Democratic Education\" und SIG 26 „Argumentation, Dialogue and Reasoning\"",
+      "mem1": "American Educational Research Association (AERA) — SIG 150 „Democratic Citizenship in Education"",
+      "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 13 „Moral and Democratic Education" und SIG 26 „Argumentation, Dialogue and Reasoning"",
       "mem3": "Gesellschaft für Empirische Bildungsforschung (GEBF)",
       "mem4": "Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung (GPJE)",
-      "talk1": "GPJE-AK Fachunterrichtsforschung Politik, Halle-Wittenberg: „Schriftliche Urteile im Politikunterricht\"",
-      "talk2": "Conflict and Controversy in the Classroom (Mitorganisation), Freie Universität Amsterdam",
-      "talk3": "JURE Conference (EARLI), Porto: „Competitive vs. cooperative classroom discussions\"",
-      "talk4": "GEBF-Jahrestagung, Bamberg: „Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?\""
+      "talk1": "GPJE-AK Fachunterrichtsforschung Politik, Halle-Wittenberg: „Schriftliche Urteile im Politikunterricht"",
+      "talk2": "Conflict and Controversy in the Classroom (Mitorganisation), Vrije Universiteit Amsterdam",
+      "talk3": "JURE Conference (EARLI), Porto: „Competitive vs. cooperative classroom discussions"",
+      "talk4": "GEBF-Jahrestagung, Bamberg: „Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?""
     },
     "contact": {
       "label": "Kontakt",
@@ -126,12 +126,12 @@ const I18N_TRANSLATIONS = {
       "label": "Publications",
       "title": "Selected Contributions",
       "subtitle": "Journal articles and book chapters.",
-      "pub1_title": "From an open classroom climate to voting intentions: What roles do knowledge and self-concept play?",
-      "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Eds.), Empirical Perspectives from Educational Research: Knowledge Transfer between Empiricism and Practice. Münster: Waxmann.",
-      "pub2_title": "“The voting age should not be lowered to 16 …” – an analysis of written student judgements on the controversy around voting at 16.",
-      "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Eds.), Maturity. On the debate over an indispensable educational ideal. Frankfurt am Main: Wochenschau.",
-      "pub3_title": "What is the learning outcome of competitive vs. cooperative classroom discussions? A quasi-experimental video study in civic education.",
-      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Eds.), Political Education in a Superdiverse Society (p. 289). Frankfurt am Main: Wochenschau.",
+      "pub1_title": "Vom offenen Unterrichtsklima zur Wahlabsicht: Welche Rolle spielen Wissen und Selbstkonzept?",
+      "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Eds.), Empirische Perspektiven aus der Bildungsforschung: Wissenstransfer zwischen Empirie und Praxis. Münster: Waxmann.",
+      "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …" – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
+      "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Eds.), Mündigkeit. Zur Debatte über ein unverzichtbares Bildungsideal. Frankfurt am Main: Wochenschau Verlag.",
+      "pub3_title": "Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen? Eine quasi-experimentelle Videostudie im Politikunterricht.",
+      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Eds.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag.",
       "doi": "DOI"
     },
     "engagement": {
@@ -144,10 +144,10 @@ const I18N_TRANSLATIONS = {
       "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 13 “Moral and Democratic Education” and SIG 26 “Argumentation, Dialogue and Reasoning”",
       "mem3": "German Society for Empirical Educational Research (GEBF)",
       "mem4": "German Society for Civic Education (GPJE)",
-      "talk1": "GPJE Symposium on Civic Education Research, Halle-Wittenberg: “Written Judgements in Civic Education”",
-      "talk2": "Conflict and Controversy in the Classroom (co-organisation), VU Amsterdam",
+      "talk1": "GPJE Symposium on Civic Education Research, Halle-Wittenberg: “Schriftliche Urteile im Politikunterricht”",
+      "talk2": "Conflict and Controversy in the Classroom (co-organisation), Vrije Universiteit Amsterdam",
       "talk3": "JURE Conference (EARLI), Porto: “Competitive vs. cooperative classroom discussions”",
-      "talk4": "GEBF Annual Conference, Bamberg: “The learning outcomes of competitive vs. cooperative classroom discussions”"
+      "talk4": "GEBF Annual Conference, Bamberg: “Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?”"
     },
     "contact": {
       "label": "Contact",

@@ -6,24 +6,53 @@
 <title>Impressum – Lukas Brandt</title>
 <meta name="description" content="Impressum und Anbieterkennzeichnung der Website von Lukas Brandt.">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://lukasbrandt.de/impress.html">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+    try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+    } catch(e){}
+})();
+</script>
 <style>
 :root {
-    --bg: #FAFBF9;
-    --surface: #FFFFFF;
-    --surface-border: #E8EAE3;
-    --text: #2C302D;
-    --text-secondary: #6B7C71;
-    --text-muted: #9AA99E;
-    --accent: #5D756A;
-    --accent-hover: #3D554A;
-    --accent-pastel: rgba(93,117,106,0.08);
+    --bg: #fafafa;
+    --bg-elevated: #f2f2f7;
+    --surface: #ffffff;
+    --surface-border: rgba(0,0,0,0.07);
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-muted: #86868b;
+    --accent: #0055ff;
+    --accent-hover: #0044cc;
+    --divider: rgba(0,0,0,0.07);
+    --shadow: rgba(0,0,0,0.04);
+    --shadow-hover: rgba(0,0,0,0.08);
     font-size: 16px;
 }
+html.dark {
+    --bg: #0d0d0f;
+    --bg-elevated: #151518;
+    --surface: #1c1c20;
+    --surface-border: rgba(255,255,255,0.06);
+    --text: #f5f5f7;
+    --text-secondary: #86868b;
+    --text-muted: #a0a0a5;
+    --accent: #2997ff;
+    --accent-hover: #4dabff;
+    --divider: rgba(255,255,255,0.07);
+    --shadow: rgba(0,0,0,0.3);
+    --shadow-hover: rgba(0,0,0,0.5);
+}
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.75; -webkit-font-smoothing:antialiased; }
+html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s, color .3s; }
+::selection { background:var(--accent); color:#fff; }
+*:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
 
 .back-link {
     position:fixed; top:1.5rem; left:1.5rem; z-index:100;
@@ -32,13 +61,13 @@ html, body { min-height:100vh; background:var(--bg); color:var(--text); font-fam
     color:var(--text-secondary); text-decoration:none; transition:color .3s;
     padding:.4rem .8rem; border-radius:.4rem;
 }
-.back-link:hover { color:var(--accent-hover); }
+.back-link:hover { color:var(--text); }
 .back-link svg { width:16px; height:16px; }
 
 .decor-line {
     position:fixed; top:0; left:0; right:0; height:3px;
-    background: linear-gradient(90deg, #D4E2D8, #A8BFAD, #D4E2D8);
-    opacity:.6;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity:.5;
 }
 
 main {
@@ -52,7 +81,8 @@ main {
     border:1px solid var(--surface-border);
     border-radius:1rem;
     padding:3rem 2.5rem;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+    box-shadow: 0 8px 40px var(--shadow), 0 1px 3px var(--shadow);
+    transition:background .3s, border-color .3s;
 }
 
 .top-meta {
@@ -61,23 +91,21 @@ main {
 }
 .top-meta .dot {
     width:6px; height:6px; border-radius:50%; background:var(--accent);
-    opacity:.5;
+    opacity:.6;
 }
 .top-meta span {
-    font-family:'Crimson Pro', serif; font-size:.9rem; font-weight:600;
-    letter-spacing:.08em; text-transform:uppercase;
+    font-family:'Inter', sans-serif; font-size:.7rem; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
     color:var(--text-muted);
 }
 
 h1 {
-    font-family:'Crimson Pro', serif;
-    font-size:2rem; font-weight:700; letter-spacing:-.01em;
+    font-size:clamp(1.8rem, 4vw, 2.2rem); font-weight:800; letter-spacing:-.02em;
     color:var(--text); margin-bottom:.2rem;
 }
 
 h2 {
-    font-family:'Crimson Pro', serif;
-    font-size:1.15rem; font-weight:600; color:var(--accent);
+    font-size:1.05rem; font-weight:700; color:var(--text); letter-spacing:-.01em;
     margin-top:2rem; margin-bottom:.6rem;
 }
 
@@ -94,19 +122,13 @@ a {
 a:hover { color:var(--accent-hover); }
 
 .sep {
-    height:1px; background:var(--surface-border);
+    height:1px; background:var(--divider);
     margin:1.5rem 0;
-}
-
-.placeholder {
-    color:var(--text-muted); font-style:italic;
-    background:var(--accent-pastel); padding:.1rem .4rem; border-radius:.25rem;
 }
 
 @media(max-width:560px) {
     main { padding:5rem 1rem 3rem; }
     .card-inner { padding:2rem 1.5rem; }
-    h1 { font-size:1.6rem; }
 }
 </style>
 </head>
@@ -115,7 +137,7 @@ a:hover { color:var(--accent-hover); }
 <div class="decor-line"></div>
 
 <a href="index.html" class="back-link">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
     <span>Zurück</span>
 </a>
 
@@ -141,13 +163,13 @@ a:hover { color:var(--accent-hover); }
       <div class="sep"></div>
 
       <h2>Haftung für Inhalte</h2>
-      <p>Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+      <p>Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Ich bin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
 
       <h2>Haftung für Links</h2>
-      <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
+      <p>Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
 
       <h2>Urheberrecht</h2>
-      <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
+      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
     </div>
   </div>
 </main>

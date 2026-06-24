@@ -6,25 +6,53 @@
 <title>Datenschutz – Lukas Brandt</title>
 <meta name="description" content="Datenschutzerklärung der Website von Lukas Brandt.">
 <meta name="robots" content="noindex">
+<link rel="canonical" href="https://lukasbrandt.de/datenschutz.html">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+    try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+    } catch(e){}
+})();
+</script>
 <style>
 :root {
-    --bg: #FAFBF9;
-    --surface: #FFFFFF;
-    --surface-border: #E8EAE3;
-    --text: #2C302D;
-    --text-secondary: #6B7C71;
-    --text-muted: #9AA99E;
-    --accent: #5D756A;
-    --accent-hover: #3D554A;
-    --accent-pastel: rgba(93,117,106,0.08);
+    --bg: #fafafa;
+    --bg-elevated: #f2f2f7;
+    --surface: #ffffff;
+    --surface-border: rgba(0,0,0,0.07);
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-muted: #86868b;
+    --accent: #0055ff;
+    --accent-hover: #0044cc;
+    --divider: rgba(0,0,0,0.07);
+    --shadow: rgba(0,0,0,0.04);
+    --shadow-hover: rgba(0,0,0,0.08);
     font-size: 16px;
 }
+html.dark {
+    --bg: #0d0d0f;
+    --bg-elevated: #151518;
+    --surface: #1c1c20;
+    --surface-border: rgba(255,255,255,0.06);
+    --text: #f5f5f7;
+    --text-secondary: #86868b;
+    --text-muted: #a0a0a5;
+    --accent: #2997ff;
+    --accent-hover: #4dabff;
+    --divider: rgba(255,255,255,0.07);
+    --shadow: rgba(0,0,0,0.3);
+    --shadow-hover: rgba(0,0,0,0.5);
+}
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.75; -webkit-font-smoothing:antialiased; }
+html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s, color .3s; }
 ::selection { background:var(--accent); color:#fff; }
+*:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
 
 .back-link {
     position:fixed; top:1.5rem; left:1.5rem; z-index:100;
@@ -33,13 +61,13 @@ html, body { min-height:100vh; background:var(--bg); color:var(--text); font-fam
     color:var(--text-secondary); text-decoration:none; transition:color .3s;
     padding:.4rem .8rem; border-radius:.4rem;
 }
-.back-link:hover { color:var(--accent-hover); }
+.back-link:hover { color:var(--text); }
 .back-link svg { width:16px; height:16px; }
 
 .decor-line {
     position:fixed; top:0; left:0; right:0; height:3px;
-    background: linear-gradient(90deg, #D4E2D8, #A8BFAD, #D4E2D8);
-    opacity:.6;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity:.5;
 }
 
 main {
@@ -53,7 +81,8 @@ main {
     border:1px solid var(--surface-border);
     border-radius:1rem;
     padding:3rem 2.5rem;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+    box-shadow: 0 8px 40px var(--shadow), 0 1px 3px var(--shadow);
+    transition:background .3s, border-color .3s;
 }
 
 .top-meta {
@@ -62,23 +91,21 @@ main {
 }
 .top-meta .dot {
     width:6px; height:6px; border-radius:50%; background:var(--accent);
-    opacity:.5;
+    opacity:.6;
 }
 .top-meta span {
-    font-family:'Crimson Pro', serif; font-size:.9rem; font-weight:600;
-    letter-spacing:.08em; text-transform:uppercase;
+    font-family:'Inter', sans-serif; font-size:.7rem; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
     color:var(--text-muted);
 }
 
 h1 {
-    font-family:'Crimson Pro', serif;
-    font-size:2rem; font-weight:700; letter-spacing:-.01em;
+    font-size:clamp(1.8rem, 4vw, 2.2rem); font-weight:800; letter-spacing:-.02em;
     color:var(--text); margin-bottom:.2rem;
 }
 
 h2 {
-    font-family:'Crimson Pro', serif;
-    font-size:1.15rem; font-weight:600; color:var(--accent);
+    font-size:1.05rem; font-weight:700; color:var(--text); letter-spacing:-.01em;
     margin-top:2rem; margin-bottom:.6rem;
 }
 
@@ -95,14 +122,13 @@ a {
 a:hover { color:var(--accent-hover); }
 
 .sep {
-    height:1px; background:var(--surface-border);
+    height:1px; background:var(--divider);
     margin:1.5rem 0;
 }
 
 @media(max-width:560px) {
     main { padding:5rem 1rem 3rem; }
     .card-inner { padding:2rem 1.5rem; }
-    h1 { font-size:1.6rem; }
 }
 </style>
 </head>
@@ -111,7 +137,7 @@ a:hover { color:var(--accent-hover); }
 <div class="decor-line"></div>
 
 <a href="index.html" class="back-link">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
     <span>Zurück</span>
 </a>
 
@@ -131,13 +157,13 @@ a:hover { color:var(--accent-hover); }
       </p>
 
       <h2>2. Hosting und Server-Logfiles</h2>
-      <p>Diese Website wird über GitHub Pages gehostet (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Aufruf der Seite verarbeitet GitHub technische Daten (IP-Adresse, Browser-Kennung, Betriebssystem, Datum und Uhrzeit, abgerufene Ressource) in Server-Logs zur Bereitstellung des Dienstes und Abwehr von Missbrauch. Eine Auswertung dieser Daten durch mich findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website). Details: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+      <p>Diese Website wird über GitHub Pages gehostet (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Aufruf der Seite verarbeitet GitHub technische Daten (IP-Adresse, Browser-Kennung, Betriebssystem, Datum und Uhrzeit, abgerufene Ressource) in Server-Logs zur Bereitstellung des Dienstes und Abwehr von Missbrauch. Eine Auswertung dieser Daten durch mich findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb der Website). Eine Übermittlung in die USA findet im Rahmen des EU-US Data Privacy Framework statt (GitHub ist gemäß <a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener">DPF-Liste</a> selbst-zertifiziert). Details: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
 
       <h2>3. Schriftarten</h2>
-      <p>Die Website verwendet Webfonts der BunnyWay d.o.o. (Cesta komandanta Staneta 4A, 1215 Medvode, Slowenien) über fonts.bunny.net. Bunny Fonts liefert die Schriftarten DSGVO-konform aus, ohne IP-Adressen zu loggen oder zu speichern. Details: <a href="https://bunny.net/privacy" target="_blank" rel="noopener">Bunny.net Privacy Policy</a>.</p>
+      <p>Die Website verwendet Webfonts der BunnyWay d.o.o. (Cesta komandanta Staneta 4A, 1215 Medvode, Slowenien) über fonts.bunny.net. Bunny Fonts liefert die Schriftarten DSGVO-konform aus EU-Servern aus, ohne IP-Adressen zu loggen oder zu speichern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen, performanten Darstellung). Details: <a href="https://bunny.net/privacy" target="_blank" rel="noopener">Bunny.net Privacy Policy</a>.</p>
 
       <h2>4. Cookies und lokale Speicherung</h2>
-      <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Im localStorage des Browsers werden ausschließlich zwei Präferenzen lokal gespeichert: die gewählte Sprache (DE/EN) und das Theme (hell/dunkel). Diese Daten verlassen Ihr Gerät nicht und werden mir nicht übermittelt.</p>
+      <p>Diese Website setzt keine Tracking- oder Marketing-Cookies. Im localStorage des Browsers werden ausschließlich zwei Präferenzen lokal gespeichert: die gewählte Sprache (DE/EN) und das Theme (hell/dunkel). Da diese Speicherung ausschließlich der Bereitstellung eines vom Nutzer ausdrücklich gewünschten Dienstes dient, ist sie nach § 25 Abs. 2 Nr. 2 TDDDG einwilligungsfrei. Die Daten verlassen Ihr Gerät nicht und werden mir nicht übermittelt.</p>
 
       <h2>5. Externe Verweise</h2>
       <p>Die Website enthält Links zu externen Diensten (ORCID, ResearchGate, LinkedIn, Verlagsseiten, DOI-Resolver). Auf deren Datenverarbeitung habe ich keinen Einfluss. Bei Klick gelten die jeweiligen Datenschutzbestimmungen.</p>
