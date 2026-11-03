@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – Lukas Brandt</title>
+<meta name="description" content="Impressum und Anbieterkennzeichnung der Website von Lukas Brandt.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://lukasbrandt.de/impress.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+    try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved === 'dark' || (saved === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+    } catch(e){}
+})();
+</script>
+<style>
+:root {
+    --bg: #fafafa;
+    --bg-elevated: #f2f2f7;
+    --surface: #ffffff;
+    --surface-border: rgba(0,0,0,0.07);
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --text-muted: #86868b;
+    --accent: #0055ff;
+    --accent-hover: #0044cc;
+    --divider: rgba(0,0,0,0.07);
+    --shadow: rgba(0,0,0,0.04);
+    --shadow-hover: rgba(0,0,0,0.08);
+    font-size: 16px;
+}
+html.dark {
+    --bg: #0d0d0f;
+    --bg-elevated: #151518;
+    --surface: #1c1c20;
+    --surface-border: rgba(255,255,255,0.06);
+    --text: #f5f5f7;
+    --text-secondary: #86868b;
+    --text-muted: #a0a0a5;
+    --accent: #2997ff;
+    --accent-hover: #4dabff;
+    --divider: rgba(255,255,255,0.07);
+    --shadow: rgba(0,0,0,0.3);
+    --shadow-hover: rgba(0,0,0,0.5);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html, body { min-height:100vh; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s, color .3s; }
+::selection { background:var(--accent); color:#fff; }
+*:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
+
+.back-link {
+    position:fixed; top:1.5rem; left:1.5rem; z-index:100;
+    display:flex; align-items:center; gap:.5rem;
+    font-size:.85rem; font-weight:500;
+    color:var(--text-secondary); text-decoration:none; transition:color .3s;
+    padding:.4rem .8rem; border-radius:.4rem;
+}
+.back-link:hover { color:var(--text); }
+.back-link svg { width:16px; height:16px; }
+
+.decor-line {
+    position:fixed; top:0; left:0; right:0; height:3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity:.5;
+}
+
+main {
+    position:relative; z-index:10; width:100%;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:6rem 1.5rem 4rem;
+}
+.card { width:min(640px,92vw); }
+.card-inner {
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:1rem;
+    padding:3rem 2.5rem;
+    box-shadow: 0 8px 40px var(--shadow), 0 1px 3px var(--shadow);
+    transition:background .3s, border-color .3s;
+}
+
+.top-meta {
+    display:flex; align-items:center; gap:.75rem;
+    margin-bottom:.5rem;
+}
+.top-meta .dot {
+    width:6px; height:6px; border-radius:50%; background:var(--accent);
+    opacity:.6;
+}
+.top-meta span {
+    font-family:'Inter', sans-serif; font-size:.7rem; font-weight:600;
+    letter-spacing:.12em; text-transform:uppercase;
+    color:var(--text-muted);
+}
+
+h1 {
+    font-size:clamp(1.8rem, 4vw, 2.2rem); font-weight:800; letter-spacing:-.02em;
+    color:var(--text); margin-bottom:.2rem;
+}
+
+h2 {
+    font-size:1.05rem; font-weight:700; color:var(--text); letter-spacing:-.01em;
+    margin-top:2rem; margin-bottom:.6rem;
+}
+
+p {
+    font-size:.95rem; color:var(--text-secondary); margin-bottom:1rem;
+}
+p:last-child { margin-bottom:0; }
+
+a {
+    color:var(--accent); text-decoration:underline;
+    text-underline-offset:.2em; text-decoration-thickness:1px;
+    transition:color .2s;
+}
+a:hover { color:var(--accent-hover); }
+
+.sep {
+    height:1px; background:var(--divider);
+    margin:1.5rem 0;
+}
+
+@media(max-width:560px) {
+    main { padding:5rem 1rem 3rem; }
+    .card-inner { padding:2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="decor-line"></div>
+
+<a href="index.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span>Zurück</span>
+</a>
+
+<main>
+  <div class="card">
+    <div class="card-inner">
+      <div class="top-meta"><div class="dot"></div><span>Anbieterkennzeichnung</span></div>
+      <h1>Impressum</h1>
+      <div class="sep"></div>
+
+      <h2>Name und Anschrift</h2>
+      <p>
+        Lukas Brandt<br>
+        August-Schmidt-Str. 6<br>
+        44227 Dortmund
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        E-Mail: <a href="mailto:lukas.brandt@tu-dortmund.de">lukas.brandt@tu-dortmund.de</a>
+      </p>
+
+      <div class="sep"></div>
+
+      <h2>Haftung für Inhalte</h2>
+      <p>Als Diensteanbieter bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Ich bin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+      <h2>Haftung für Links</h2>
+      <p>Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
+
+      <h2>Urheberrecht</h2>
+      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
