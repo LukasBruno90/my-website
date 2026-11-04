@@ -4,7 +4,7 @@ const I18N_TRANSLATIONS = {
     "nav": { "about": "Über", "research": "Forschung", "publications": "Publikationen", "engagement": "Engagement", "contact": "Kontakt" },
     "skip": { "to_content": "Zum Inhalt springen" },
     "hero": {
-      "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Promovend Empirische Politikdidaktik",
+      "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Empirische Politikdidaktik · Disputation 2026 bestanden",
       "bio": "Ich erforsche, wie kooperative und kompetitive Diskussionsformate die politische Urteilsbildung im Politikunterricht beeinflussen — videobasiert, quasi-experimentell.",
       "affiliation": "Technische Universität Dortmund",
       "affiliation2": "Institut für Didaktik integrativer Fächer · Didaktik der Sozialwissenschaften",
@@ -17,7 +17,7 @@ const I18N_TRANSLATIONS = {
       "year_now": "heute"
     },
     "roles": {
-      "diss": "Promovend",
+      "diss": "Promovend, Disputation 10/2026 bestanden",
       "cornelsen": "Mitautor",
       "wahlrecht": "Projektkoordination & wissenschaftliche Mitarbeit"
     },
@@ -26,7 +26,7 @@ const I18N_TRANSLATIONS = {
       "title": "Projekte",
       "subtitle": "Dissertation, Projektbeteiligung und Lehrwerksarbeit.",
       "diss_tag": "Dissertationsprojekt",
-      "diss_status": "Aktiv",
+      "diss_status": "Buchfassung in Arbeit",
       "diss_title": "Kooperation und Wettbewerb in argumentativen Lehr-Lern-Prozessen",
       "diss_body": "Quasi-experimentelle Videostudie zur Wirkung kooperativer vs. kompetitiver Diskussionsformate auf die politische Urteilskompetenz. 16 Gymnasialklassen in NRW durchlaufen eine siebenstündige Unterrichtsreihe zur Absenkung des Wahlalters; in der abschließenden Fishbowl-Diskussion werden mündliche Argumentation, schriftliche Urteilsqualität und Fachwissenszuwachs erfasst.",
       "diss_link": "Mehr erfahren",
@@ -86,7 +86,7 @@ const I18N_TRANSLATIONS = {
     "nav": { "about": "About", "research": "Research", "publications": "Publications", "engagement": "Engagement", "contact": "Contact" },
     "skip": { "to_content": "Skip to content" },
     "hero": {
-      "role": "M.Ed. · Research Associate · Doctoral Researcher in Empirical Civic Education",
+      "role": "M.Ed. · Research Associate · Empirical Civic Education · PhD defended 2026",
       "bio": "I study how cooperative and competitive discussion formats shape political judgement in civic education — video-based, quasi-experimental.",
       "affiliation": "TU Dortmund University",
       "affiliation2": "Institute for the Didactics of Integrative Subjects · Social Science Education",
@@ -99,7 +99,7 @@ const I18N_TRANSLATIONS = {
       "year_now": "present"
     },
     "roles": {
-      "diss": "Doctoral Researcher",
+      "diss": "Doctoral researcher, defended 10/2026",
       "cornelsen": "Co-author",
       "wahlrecht": "Project Coordination & Research Associate"
     },
@@ -108,7 +108,7 @@ const I18N_TRANSLATIONS = {
       "title": "Projects",
       "subtitle": "Dissertation, project work and textbook authorship.",
       "diss_tag": "Dissertation Project",
-      "diss_status": "Active",
+      "diss_status": "Book in preparation",
       "diss_title": "Cooperation and Competition in Argumentative Teaching-Learning Processes",
       "diss_body": "Quasi-experimental video study on the impact of cooperative vs. competitive discussion formats on political judgement competency. 16 grammar school classes in North Rhine-Westphalia complete a seven-lesson unit on lowering the voting age; the concluding fishbowl discussion is used to assess oral argumentation, written judgement quality and content knowledge gains.",
       "diss_link": "Learn more",
