@@ -10,16 +10,16 @@ Die statische persönliche Website: `index.html`, Zweisprachigkeit über `i18n.j
 
 ## Was hier NICHT geführt wird
 
-| Thema | Führendes Repo |
+| Thema | Führender Ort |
 |---|---|
-| Forschungsschwerpunkte — die homepage-reife Fassung DE + EN | `postdoc_planung/forschungsschwerpunkte.md` |
-| Lebenslauf und Bewerbungsmaterial | `applications` |
-| Publikationsliste | `paper` · `diss` |
+| Forschungsschwerpunkte — die homepage-reife Fassung DE + EN | `forschung/habil/forschungsschwerpunkte.md` |
+| Lebenslauf und Bewerbungsmaterial | `privat/karriere/bewerbungen` |
+| Publikationsliste | `forschung/publikationen/paper` · `forschung/wahlvip/diss` |
 
 **Die Website ist ein Ausspielkanal, keine Quelle.** Inhalte kommen aus den Repos oben; hier steht nur die Darstellung. Bei Aktualisierung des Profils dort ändern und hier nachziehen.
 
 ## Verbund
 
-*Regeln: [`../career/besitzverzeichnis.md`](../career/besitzverzeichnis.md) · Änderungen anderer Repos: [`../career/aenderungslog.md`](../career/aenderungslog.md) — beim Einstieg überfliegen.*
+*Ein Thema hat genau einen führenden Ort; die Wegweiser stehen in den Wurzel-CLAUDE.md von `forschung` und `privat`.*
 
 **Sprache:** Deutsch. **Commits macht Claude, gepusht wird von Lukas.**
