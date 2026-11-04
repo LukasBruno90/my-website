@@ -1,0 +1,11 @@
+#!/bin/sh
+# C-Schutz vor jedem Commit (auch aus GitHub Desktop). Logik: .githooks/c_schutz.py
+# Aktiviert per: git config core.hooksPath .githooks
+wurzel=$(git rev-parse --show-toplevel) || exit 1
+if command -v python >/dev/null 2>&1; then
+  exec python "$wurzel/.githooks/c_schutz.py" --hook
+elif command -v py >/dev/null 2>&1; then
+  exec py -3 "$wurzel/.githooks/c_schutz.py" --hook
+fi
+echo "C-Schutz: Python nicht gefunden, Commit angehalten." >&2
+exit 1

@@ -1,0 +1,4 @@
+# GitHub Pages: Arbeitsnotizen des Repos nicht als Seiten ausliefern.
+exclude:
+  - CLAUDE.md
+  - README.md
