@@ -89,7 +89,7 @@ const I18N_TRANSLATIONS = {
       "role": "M.Ed. · Research Associate · Empirical Civic Education",
       "bio": "I study how cooperative and competitive discussion formats shape political judgement in civic education — video-based, quasi-experimental.",
       "affiliation": "TU Dortmund University",
-      "affiliation2": "Institute for the Didactics of Integrative Subjects · Social Science Education",
+      "affiliation2": "Institute for Interdisciplinary Didactics · Didactics of Social Sciences",
       "cta_primary": "Get in touch",
       "cta_secondary": "View research"
     },
