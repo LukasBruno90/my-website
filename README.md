@@ -6,7 +6,7 @@ Persönliche Website von Lukas Brandt — statisches HTML/CSS/JS, kein Build-Sch
 
 | Datei | Zweck |
 |---|---|
-| `index.html` | Hauptseite: Forschung, Publikationen, Kontakt (DE/EN, Light/Dark) |
+| `index.html` | Startseite mit Links: Kopf und fünf Verweise auf Profile und E-Mail (DE/EN, Light/Dark) |
 | `impress.html` | Impressum |
 | `style.css` | Styles für `index.html` |
 | `i18n.js` | Übersetzungen + Sprachumschaltung für `index.html` |
@@ -31,6 +31,3 @@ Doppelklick auf `index.html` geht auch, dann blockiert der Browser aber teilweis
 
 GitHub Pages mit Custom Domain `lukasbrandt.de` (siehe `CNAME`). Nach dem ersten Push: in den Repo-Settings → Pages die Domain registrieren und beim DNS-Provider den `CNAME`-Eintrag setzen.
 
-## Offene Punkte
-
-- OG-Image für Social-Media-Previews

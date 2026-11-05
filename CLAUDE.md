@@ -1,12 +1,14 @@
 # Repo my-website — persönliche Website
 
-*Lukas Conrad Brandt. Stand: 24. August 2026.*
+*Lukas Conrad Brandt. Stand: 5. November 2026.*
 
 ---
 
 ## Was ist das hier
 
 Die statische persönliche Website: `index.html`, Zweisprachigkeit über `i18n.js`, dazu Impressum, Datenschutz, 404 und `CNAME` für die eigene Domain. Kein Build-System.
+
+**Seit 05.11.2026 eine Startseite mit Links** (Entscheidung Lukas): Foto, Name, Stellenzeile, ein Satz zur Forschung, Zugehörigkeit, darunter fünf Links (Profil an der TU Dortmund, ORCID, ResearchGate, LinkedIn, E-Mail) mit je einer Zeile, wofür. Keine Listen von Publikationen, Vorträgen oder Mitgliedschaften; die führt die IDIF-Seite vollständig. Die frühere ausführliche Seite liegt im Git-Verlauf (zuletzt `8a32c73`). Ob und wann die Seite wieder ausgebaut wird (etwa zur Projekt- und Materialseite), ist offen.
 
 ## Was hier NICHT geführt wird
 

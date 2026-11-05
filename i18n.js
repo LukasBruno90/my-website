@@ -1,80 +1,22 @@
 /* ===== i18n System ===== */
 const I18N_TRANSLATIONS = {
   "de": {
-    "nav": { "about": "Über", "research": "Forschung", "publications": "Publikationen", "engagement": "Engagement", "contact": "Kontakt" },
     "skip": { "to_content": "Zum Inhalt springen" },
     "hero": {
       "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Empirische Politikdidaktik",
-      "bio": "Ich erforsche, wie kooperative und kompetitive Diskussionsformate die politische Urteilsbildung im Politikunterricht beeinflussen — videobasiert, quasi-experimentell.",
+      "bio": "Ich erforsche, wie kooperative und kompetitive Diskussionsformate die politische Urteilsbildung im Politikunterricht beeinflussen – videobasiert und quasi-experimentell.",
       "affiliation": "Technische Universität Dortmund",
-      "affiliation2": "Institut für Didaktik integrativer Fächer · Didaktik der Sozialwissenschaften",
-      "cta_primary": "Schreib mir",
-      "cta_secondary": "Forschung ansehen"
+      "affiliation2": "Institut für Didaktik integrativer Fächer · Didaktik der Sozialwissenschaften"
     },
-    "meta": {
-      "period": "Zeitraum",
-      "role": "Rolle",
-      "year_now": "heute"
-    },
-    "roles": {
-      "diss": "Promovend, Disputation 10/2026 bestanden",
-      "cornelsen": "Mitautor",
-      "wahlrecht": "Projektkoordination & wissenschaftliche Mitarbeit"
-    },
-    "research": {
-      "label": "Forschung",
-      "title": "Projekte",
-      "subtitle": "Dissertation, Projektbeteiligung und Lehrwerksarbeit.",
-      "diss_tag": "Dissertationsprojekt",
-      "diss_status": "Buchfassung in Arbeit",
-      "diss_title": "Kooperation und Wettbewerb in argumentativen Lehr-Lern-Prozessen",
-      "diss_body": "Quasi-experimentelle Videostudie zur Wirkung kooperativer vs. kompetitiver Diskussionsformate auf die politische Urteilskompetenz. 16 Gymnasialklassen in NRW durchlaufen eine siebenstündige Unterrichtsreihe zur Absenkung des Wahlalters; in der abschließenden Fishbowl-Diskussion werden mündliche Argumentation, schriftliche Urteilsqualität und Fachwissenszuwachs erfasst.",
-      "diss_link": "Mehr erfahren",
-      "cornelsen_tag": "Lehrwerk",
-      "cornelsen_status": "Beendet",
-      "cornelsen_title": "Wirtschaft und Politik – Differenzierende Ausgabe NRW",
-      "cornelsen_body": "Sechs Schulbücher und Handreichungen für die Jahrgangsstufen 5–10 der differenzierenden NRW-Ausgabe, erschienen zwischen 2021 und 2023 im Cornelsen Verlag.",
-      "cornelsen_link": "Zur Reihe",
-      "wahlrecht_tag": "Forschungsprojekt",
-      "wahlrecht_status": "Beendet",
-      "wahlrecht_title": "(K)ein Wahlrecht für Kinder und Jugendliche?!",
-      "wahlrecht_body": "Lehrstuhl-Projekt unter Leitung von Prof. Dr. Dorothee Gronostay zur Förderung von Politikkompetenz anhand der Kontroverse um die Absenkung des Wahlalters auf 16 Jahre. Konzeption und videografische Erhebung einer siebenstündigen Unterrichtsreihe in 16 Klassen an sieben Gymnasien in Nordrhein-Westfalen."
-    },
-    "publications": {
-      "label": "Publikationen",
-      "title": "Ausgewählte Beiträge",
-      "subtitle": "Buchbeiträge und Tagungsabstracts.",
-      "pub1_title": "Vom offenen Unterrichtsklima zur Wahlabsicht: Welche Rolle spielen Wissen und Selbstkonzept?",
-      "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Hrsg.), Empirische Perspektiven aus der Bildungsforschung: Wissenstransfer zwischen Empirie und Praxis. Münster: Waxmann.",
-      "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …“ – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
-      "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Hrsg.), Mündigkeit. Zur Debatte über ein unverzichtbares Bildungsideal. Frankfurt am Main: Wochenschau Verlag.",
-      "pub3_title": "Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen? Eine quasi-experimentelle Videostudie im Politikunterricht.",
-      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Hrsg.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag.",
-      "doi": "DOI"
-    },
-    "engagement": {
-      "label": "Engagement",
-      "title": "Mitgliedschaften & Vorträge",
-      "subtitle": "Fachgesellschaften und ausgewählte Vorträge.",
-      "memberships_title": "Mitgliedschaften",
-      "talks_title": "Ausgewählte Vorträge",
-      "mem1": "American Educational Research Association (AERA) — SIG 150 „Democratic Citizenship in Education“",
-      "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 11 „Teaching and Teacher Education“, SIG 13 „Moral and Democratic Education“ und SIG 26 „Argumentation, Dialogue and Reasoning“",
-      "mem3": "Gesellschaft für Empirische Bildungsforschung (GEBF)",
-      "mem4": "Gesellschaft für Politikdidaktik und politische Jugend- und Erwachsenenbildung (GPJE) — AG Fachunterrichtsforschung Politik",
-      "talk1": "EARLI SIG 26 Conference, Brno: „Arguing to Learn or Arguing to Win? Goal Structures and Written Argumentative Judgments“",
-      "talk2": "Fachtagung der AG Fachunterrichtsforschung Politik der GPJE, Halle-Wittenberg: „Schriftliche Urteile im Politikunterricht“",
-      "talk3": "JURE Conference (EARLI), Porto, Poster: „Discussion vs. Debate in Political Education: A Quasi-Experimental Study“",
-      "talk4": "Nachwuchstagung zur 9. GEBF-Jahrestagung (online): „Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?“"
-    },
-    "contact": {
-      "label": "Kontakt",
-      "title": "Schreib mir",
-      "lead": "Für Forschungsfragen, Kooperationen, Vorträge oder fachlichen Austausch.",
-      "mailto": "mailto:lukas.brandt@tu-dortmund.de?subject=Anfrage über lukasbrandt.de",
-      "social_orcid": "ORCID",
-      "social_researchgate": "ResearchGate",
-      "social_linkedin": "LinkedIn"
+    "links": {
+      "tu_href": "https://idif.sowi.tu-dortmund.de/professuren/didaktik-der-sozialwissenschaften/lukas-brandt/",
+      "tu_title": "Profil an der TU Dortmund",
+      "tu_sub": "Vita, Forschung, Publikationen und Vorträge",
+      "orcid_sub": "Werke und Forschungsnachweis",
+      "rg_sub": "Publikationen und fachlicher Austausch",
+      "li_sub": "Beruflicher Werdegang",
+      "mail_title": "E-Mail",
+      "mail_href": "mailto:lukas.brandt@tu-dortmund.de"
     },
     "footer": {
       "impress": "Impressum",
@@ -83,80 +25,22 @@ const I18N_TRANSLATIONS = {
     "lang": { "toggle": "EN" }
   },
   "en": {
-    "nav": { "about": "About", "research": "Research", "publications": "Publications", "engagement": "Engagement", "contact": "Contact" },
     "skip": { "to_content": "Skip to content" },
     "hero": {
       "role": "M.Ed. · Research Associate · Empirical Civic Education",
-      "bio": "I study how cooperative and competitive discussion formats shape political judgement in civic education — video-based, quasi-experimental.",
+      "bio": "I study how cooperative and competitive discussion formats shape political judgement in civic education – video-based and quasi-experimental.",
       "affiliation": "TU Dortmund University",
-      "affiliation2": "Institute for Interdisciplinary Didactics · Didactics of Social Sciences",
-      "cta_primary": "Get in touch",
-      "cta_secondary": "View research"
+      "affiliation2": "Institute for Interdisciplinary Didactics · Didactics of Social Sciences"
     },
-    "meta": {
-      "period": "Period",
-      "role": "Role",
-      "year_now": "present"
-    },
-    "roles": {
-      "diss": "Doctoral researcher, defended 10/2026",
-      "cornelsen": "Co-author",
-      "wahlrecht": "Project Coordination & Research Associate"
-    },
-    "research": {
-      "label": "Research",
-      "title": "Projects",
-      "subtitle": "Dissertation, project work and textbook authorship.",
-      "diss_tag": "Dissertation Project",
-      "diss_status": "Book in preparation",
-      "diss_title": "Cooperation and Competition in Argumentative Teaching-Learning Processes",
-      "diss_body": "Quasi-experimental video study on the impact of cooperative vs. competitive discussion formats on political judgement competency. 16 classes at academic-track secondary schools in North Rhine-Westphalia complete a seven-lesson unit on lowering the voting age; the concluding fishbowl discussion is used to assess oral argumentation, written judgement quality and content knowledge gains.",
-      "diss_link": "Learn more",
-      "cornelsen_tag": "Textbook",
-      "cornelsen_status": "Completed",
-      "cornelsen_title": "Wirtschaft und Politik – Differentiated NRW Edition",
-      "cornelsen_body": "Six textbooks and teacher's guides for grades 5–10 of the differentiated North Rhine-Westphalia edition, published between 2021 and 2023 by Cornelsen Verlag.",
-      "cornelsen_link": "View series",
-      "wahlrecht_tag": "Research Project",
-      "wahlrecht_status": "Completed",
-      "wahlrecht_title": "(K)ein Wahlrecht für Kinder und Jugendliche?!",
-      "wahlrecht_body": "Chair-led project under Prof. Dr. Dorothee Gronostay on fostering political competence through the controversy over lowering the voting age to 16. Design and video-based data collection of a seven-lesson unit in 16 classes at seven academic-track secondary schools in North Rhine-Westphalia."
-    },
-    "publications": {
-      "label": "Publications",
-      "title": "Selected Contributions",
-      "subtitle": "Book chapters and conference abstracts.",
-      "pub1_title": "Vom offenen Unterrichtsklima zur Wahlabsicht: Welche Rolle spielen Wissen und Selbstkonzept?",
-      "pub1_venue": "In: Grommé, E.; Schlöpker, J.; Kaiser, T.; Reintjes, C.; Nonte, S. (Eds.), Empirische Perspektiven aus der Bildungsforschung: Wissenstransfer zwischen Empirie und Praxis. Münster: Waxmann.",
-      "pub2_title": "„Das Wahlalter sollte nicht auf 16 Jahre abgesenkt werden …“ – eine Auswertung schriftlicher Schülerurteile zur Kontroverse um die Wahl ab 16 Jahren.",
-      "pub2_venue": "In: Drerup, J.; Goll, T.; Zulaica y Mugica, M. (Eds.), Mündigkeit. Zur Debatte über ein unverzichtbares Bildungsideal. Frankfurt am Main: Wochenschau Verlag.",
-      "pub3_title": "Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen? Eine quasi-experimentelle Videostudie im Politikunterricht.",
-      "pub3_venue": "In: Oberle, M.; Stamer, M.-M. (Eds.), Politische Bildung in der superdiversen Gesellschaft (S. 289). Frankfurt am Main: Wochenschau Verlag.",
-      "doi": "DOI"
-    },
-    "engagement": {
-      "label": "Engagement",
-      "title": "Memberships & Talks",
-      "subtitle": "Learned societies and selected talks.",
-      "memberships_title": "Memberships",
-      "talks_title": "Selected Talks",
-      "mem1": "American Educational Research Association (AERA) — SIG 150 “Democratic Citizenship in Education”",
-      "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 11 “Teaching and Teacher Education”, SIG 13 “Moral and Democratic Education” and SIG 26 “Argumentation, Dialogue and Reasoning”",
-      "mem3": "German Society for Empirical Educational Research (GEBF)",
-      "mem4": "German Society for Civic Education (GPJE) — working group Fachunterrichtsforschung Politik",
-      "talk1": "EARLI SIG 26 Conference, Brno: “Arguing to Learn or Arguing to Win? Goal Structures and Written Argumentative Judgments”",
-      "talk2": "Conference of the GPJE working group Fachunterrichtsforschung Politik, Halle-Wittenberg: “Schriftliche Urteile im Politikunterricht”",
-      "talk3": "JURE Conference (EARLI), Porto, poster: “Discussion vs. Debate in Political Education: A Quasi-Experimental Study”",
-      "talk4": "Early-career conference of the 9th GEBF Annual Conference (online): “Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?”"
-    },
-    "contact": {
-      "label": "Contact",
-      "title": "Get in touch",
-      "lead": "For research questions, collaborations, talks or academic exchange.",
-      "mailto": "mailto:lukas.brandt@tu-dortmund.de?subject=Inquiry via lukasbrandt.de",
-      "social_orcid": "ORCID",
-      "social_researchgate": "ResearchGate",
-      "social_linkedin": "LinkedIn"
+    "links": {
+      "tu_href": "https://idif.sowi.tu-dortmund.de/en/professorships/didactics-of-social-sciences/lukas-brandt/",
+      "tu_title": "Profile at TU Dortmund University",
+      "tu_sub": "CV, research, publications and talks",
+      "orcid_sub": "Works and research record",
+      "rg_sub": "Publications and academic exchange",
+      "li_sub": "Professional background",
+      "mail_title": "Email",
+      "mail_href": "mailto:lukas.brandt@tu-dortmund.de"
     },
     "footer": {
       "impress": "Legal Notice",
