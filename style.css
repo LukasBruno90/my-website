@@ -279,7 +279,6 @@ html.dark .research-status--ended {
     margin-bottom:1.2rem;
 }
 .engagement-list { list-style:none; padding:0; margin:0; }
-.engagement-list + .engagement-col-title { margin-top:2.5rem; }
 .engagement-list li {
     padding:.9rem 0;
     border-top:1px solid var(--divider);

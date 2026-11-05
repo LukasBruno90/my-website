@@ -54,11 +54,10 @@ const I18N_TRANSLATIONS = {
     },
     "engagement": {
       "label": "Engagement",
-      "title": "Mitgliedschaften, Vorträge & Tagungen",
-      "subtitle": "Fachgesellschaften, ausgewählte Vorträge und Tagungsorganisation.",
+      "title": "Mitgliedschaften & Vorträge",
+      "subtitle": "Fachgesellschaften und ausgewählte Vorträge.",
       "memberships_title": "Mitgliedschaften",
       "talks_title": "Ausgewählte Vorträge",
-      "org_title": "Tagungsorganisation",
       "mem1": "American Educational Research Association (AERA) — SIG 150 „Democratic Citizenship in Education“",
       "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 11 „Teaching and Teacher Education“, SIG 13 „Moral and Democratic Education“ und SIG 26 „Argumentation, Dialogue and Reasoning“",
       "mem3": "Gesellschaft für Empirische Bildungsforschung (GEBF)",
@@ -66,9 +65,7 @@ const I18N_TRANSLATIONS = {
       "talk1": "EARLI SIG 26 Conference, Brno: „Arguing to Learn or Arguing to Win? Goal Structures and Written Argumentative Judgments“",
       "talk2": "Fachtagung der AG Fachunterrichtsforschung Politik der GPJE, Halle-Wittenberg: „Schriftliche Urteile im Politikunterricht“",
       "talk3": "JURE Conference (EARLI), Porto, Poster: „Discussion vs. Debate in Political Education: A Quasi-Experimental Study“",
-      "talk4": "Nachwuchstagung zur 9. GEBF-Jahrestagung (online): „Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?“",
-      "org1": "Tagung der AG Fachunterrichtsforschung Politik der GPJE, TU Dortmund (Ausrichtung)",
-      "org2": "Conflict and Controversy in the Classroom, Vrije Universiteit Amsterdam (Mitorganisation)"
+      "talk4": "Nachwuchstagung zur 9. GEBF-Jahrestagung (online): „Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?“"
     },
     "contact": {
       "label": "Kontakt",
@@ -139,11 +136,10 @@ const I18N_TRANSLATIONS = {
     },
     "engagement": {
       "label": "Engagement",
-      "title": "Memberships, Talks & Conferences",
-      "subtitle": "Learned societies, selected talks and conference organisation.",
+      "title": "Memberships & Talks",
+      "subtitle": "Learned societies and selected talks.",
       "memberships_title": "Memberships",
       "talks_title": "Selected Talks",
-      "org_title": "Conference Organisation",
       "mem1": "American Educational Research Association (AERA) — SIG 150 “Democratic Citizenship in Education”",
       "mem2": "European Association for Research on Learning and Instruction (EARLI) — SIG 11 “Teaching and Teacher Education”, SIG 13 “Moral and Democratic Education” and SIG 26 “Argumentation, Dialogue and Reasoning”",
       "mem3": "German Society for Empirical Educational Research (GEBF)",
@@ -151,9 +147,7 @@ const I18N_TRANSLATIONS = {
       "talk1": "EARLI SIG 26 Conference, Brno: “Arguing to Learn or Arguing to Win? Goal Structures and Written Argumentative Judgments”",
       "talk2": "Conference of the GPJE working group Fachunterrichtsforschung Politik, Halle-Wittenberg: “Schriftliche Urteile im Politikunterricht”",
       "talk3": "JURE Conference (EARLI), Porto, poster: “Discussion vs. Debate in Political Education: A Quasi-Experimental Study”",
-      "talk4": "Early-career conference of the 9th GEBF Annual Conference (online): “Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?”",
-      "org1": "Conference of the GPJE working group Fachunterrichtsforschung Politik, TU Dortmund (host)",
-      "org2": "Conflict and Controversy in the Classroom, Vrije Universiteit Amsterdam (co-organisation)"
+      "talk4": "Early-career conference of the 9th GEBF Annual Conference (online): “Welchen Lernertrag haben kompetitive vs. kooperative Unterrichtsdiskussionen?”"
     },
     "contact": {
       "label": "Contact",
