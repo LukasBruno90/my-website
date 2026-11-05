@@ -4,7 +4,7 @@ const I18N_TRANSLATIONS = {
     "nav": { "about": "Über", "research": "Forschung", "publications": "Publikationen", "engagement": "Engagement", "contact": "Kontakt" },
     "skip": { "to_content": "Zum Inhalt springen" },
     "hero": {
-      "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Empirische Politikdidaktik · Disputation 2026 bestanden",
+      "role": "M.Ed. · Wissenschaftlicher Mitarbeiter · Empirische Politikdidaktik",
       "bio": "Ich erforsche, wie kooperative und kompetitive Diskussionsformate die politische Urteilsbildung im Politikunterricht beeinflussen — videobasiert, quasi-experimentell.",
       "affiliation": "Technische Universität Dortmund",
       "affiliation2": "Institut für Didaktik integrativer Fächer · Didaktik der Sozialwissenschaften",
@@ -86,7 +86,7 @@ const I18N_TRANSLATIONS = {
     "nav": { "about": "About", "research": "Research", "publications": "Publications", "engagement": "Engagement", "contact": "Contact" },
     "skip": { "to_content": "Skip to content" },
     "hero": {
-      "role": "M.Ed. · Research Associate · Empirical Civic Education · PhD defended 2026",
+      "role": "M.Ed. · Research Associate · Empirical Civic Education",
       "bio": "I study how cooperative and competitive discussion formats shape political judgement in civic education — video-based, quasi-experimental.",
       "affiliation": "TU Dortmund University",
       "affiliation2": "Institute for the Didactics of Integrative Subjects · Social Science Education",
